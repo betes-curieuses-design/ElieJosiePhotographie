@@ -1,0 +1,119 @@
+//
+// Fonts file
+//
+// Allocated area for font definitions used by this application
+//
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:700,700italic);
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-black-webfont.eot');
+    src: url('../fonts/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-black-webfont.svg#latoblack') format('svg'),
+         url('../fonts/lato-black-webfont.woff') format('woff'),
+         url('../fonts/lato-black-webfont.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-italic-webfont.eot');
+    src: url('../fonts/lato-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-italic-webfont.svg#latoitalic') format('svg'),
+         url('../fonts/lato-italic-webfont.woff') format('woff'),
+         url('../fonts/lato-italic-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-regular-webfont.eot');
+    src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular-webfont.svg#latoregular') format('svg'),
+         url('../fonts/lato-regular-webfont.woff') format('woff'),
+         url('../fonts/lato-regular-webfont.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/lato-light-webfont.eot');
+    src: url('../fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-light-webfont.svg#latolight') format('svg'),
+         url('../fonts/lato-light-webfont.woff') format('woff'),
+         url('../fonts/lato-light-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('../fonts/lato-medium-webfont.eot');
+  src: url('../fonts/lato-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lato-medium-webfont.woff2') format('woff2'),
+  url('../fonts/lato-medium-webfont.woff') format('woff'),
+  url('../fonts/lato-medium-webfont.ttf') format('truetype'),
+  url('../fonts/lato-medium-webfont.svg#latomedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('../fonts/lato-mediumitalic-webfont.eot');
+  src: url('../fonts/lato-mediumitalic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lato-mediumitalic-webfont.woff2') format('woff2'),
+  url('../fonts/lato-mediumitalic-webfont.woff') format('woff'),
+  url('../fonts/lato-mediumitalic-webfont.ttf') format('truetype'),
+  url('../fonts/lato-mediumitalic-webfont.svg#latomedium_italic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('../fonts/lato-semibold-webfont.eot');
+  src: url('../fonts/lato-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lato-semibold-webfont.woff2') format('woff2'),
+  url('../fonts/lato-semibold-webfont.woff') format('woff'),
+  url('../fonts/lato-semibold-webfont.ttf') format('truetype'),
+  url('../fonts/lato-semibold-webfont.svg#latosemibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'lato';
+  src: url('../fonts/lato-semibolditalic-webfont.eot');
+  src: url('../fonts/lato-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lato-semibolditalic-webfont.woff2') format('woff2'),
+  url('../fonts/lato-semibolditalic-webfont.woff') format('woff'),
+  url('../fonts/lato-semibolditalic-webfont.ttf') format('truetype'),
+  url('../fonts/lato-semibolditalic-webfont.svg#latosemibold_italic') format('svg');
+  font-weight: 600;
+  font-style: italic;
+
+}
+
+.bold {
+  font-weight: 600;
+}
+
+
+
+
+//
+// Chrome exhibits strange behavior when custom fonts are used
+// on select inputs. This fixes the garbled text.
+//
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {
+        font-family: sans-serif;
+    }
+}
