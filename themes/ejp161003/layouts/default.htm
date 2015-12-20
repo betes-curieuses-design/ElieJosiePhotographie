@@ -14,11 +14,10 @@ description = "Default Layout"
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 {% styles %}
 <link href="{{ [
-            'assets/vendor/bootstrap/css/bootstrap.css',
             'assets/vendor/animate/animate.css',
             'assets/vendor/animate/set.css',
 			'assets/vendor/gallery/blueimp-gallery.min.css',
-			'assets/css/style.css']|theme }}" rel="stylesheet">
+			'assets/css/theme.css']|theme }}" rel="stylesheet">
 <!-- font awesome -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- favicon -->
@@ -32,7 +31,7 @@ description = "Default Layout"
 	{% partial "nav" %}
 </div>
 
-<div id="works" class=" clearfix grid"> 
+<div id="works" class=" clearfix grid">
 	{% partial "works" %}
 </div>
 

@@ -11,7 +11,7 @@
 	float: left;
 	overflow: hidden;
 	margin: 0;	/*change here for spacing*/	
-	width: 33.333333333%;
+	width: 50%;
 	text-align: center;
 	cursor: pointer;
 }
