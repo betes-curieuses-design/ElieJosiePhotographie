@@ -1,19 +1,12 @@
-@color_1: #666;
-@color_2: #00a9c6;
-@color_3: #fff;
-@color_4: #ccc;
-@color_5: #21abca;
-@color_6: #21ABCA;
-@color_7: #888;
-@color_8: #aaa;
+
+@import "../theme/variables";
 
 body {
-  color: @color_1;
-  font: 300 15px/15px Roboto,Arial,Helvetica;
+  color: @brand-secondary;
   -webkit-font-smoothing: antialiased;
 }
 a {
-  color: @color_2;
+  color: @brand-primary;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -22,7 +15,7 @@ a {
   transition: all 0.3s ease-in-out;
   outline: none !important;
   &:hover {
-    color: @color_1;
+    color: @brand-secondary;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -41,7 +34,6 @@ a {
   border: none;
   border-radius: 0;
   padding: 1em 4em;
-  background: rgba(0,0,0,0.5);
   text-transform: uppercase;
   &:hover {
     -webkit-transition: all 0.3s ease-in-out;
@@ -56,76 +48,33 @@ a {
     color: @color_3;
   }
 }
-h1 {
-  margin: 0;
-  line-height: 1em;
-  font: 700 5em Roboto,Arial,Helvetica;
-  margin: 0.25em 0;
-  text-transform: uppercase;
-}
-h2 {
-  margin: 0;
-  line-height: 1em;
-  font: 300 2.5em Roboto,Arial,Helvetica;
-  margin-bottom: 1.5em;
-}
-h3 {
-  margin: 0;
-  line-height: 1em;
-  font: 300 2em Roboto,Arial,Helvetica;
-  margin: 2em 0 1em 0;
-}
-h4 {
-  margin: 0;
-  line-height: 1em;
-  font: 300 1.5em Roboto,Arial,Helvetica;
-  margin-bottom: 1em;
-  i {
-    margin-right: 0.5em;
-  }
-}
-p {
-  font-size: 1em;
-  line-height: 1.7em;
-  margin-bottom: 1.7em;
-}
+
 .spacer {
   padding: 6em 0;
 }
-.btn-default {
-  color: @color_4;
-  border: 1px solid #aaa;
-  &:hover {
-    background: rgba(0,0,0,0.8);
-  }
-  &:active {
-    background: rgba(0,0,0,0.8);
-  }
-}
-.btn-primary {
-  color: @color_3;
-  background: #00a9c6;
-  width: 100%;
-  outline: none;
-  &:hover {
-    background: #1BC0DC;
-    box-shadow: none;
-  }
-  &:active {
-    background: #1BC0DC;
-    box-shadow: none;
-  }
-  &:focus {
-    background: #1BC0DC;
-    box-shadow: none;
-  }
-}
+
 .navbar-nav {
   >li {
     >a {
       font-size: 1em;
-      line-height: 3.6em;
+      line-height: 3.8em;
+      font-family: "quicksand";
+      font-weight: 500;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
+  a:hover {
+    font-family: "quicksand";
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
   }
 }
 .navbar-fixed-top {
@@ -136,20 +85,16 @@ p {
 }
 .navbar-default {
   .navbar-nav {
-    >.active {
       >a {
         background: none;
         color: @color_5;
+
         &:hover {
           background: none;
           color: @color_5;
         }
-        &:focus {
-          background: none;
-          color: @color_5;
-        }
+
       }
-    }
   }
 }
 #head {
@@ -232,6 +177,10 @@ p {
     }
   }
 }
+section{
+  background-color: #9CDBF5;
+}
+
 .partners {
   img {
     float: left;
@@ -256,14 +205,15 @@ p {
   }
   bottom: 0;
 }
-#works {
+#portfolio {
   padding-top: 10em;
   figcaption {
     a {
-      border: 1px solid #fff;
+      border: 1px solid @brand-primary;
       margin-top: 1em;
       display: inline-block;
-      color: @color_3;
+      font-weight: 700;
+      color: @brand-primary;
       padding: 0 2em;
       &:hover {
         text-decoration: none;
@@ -293,26 +243,15 @@ p {
     }
   }
 }
-.highlight-info {
-  background: url(../images/lab.jpg) center fixed;
-  background-size: cover;
-  color: @color_3;
-  .overlay {
-    background: rgba(33,171,202,0.5);
-  }
-  h4 {
-    color: @color_3;
-    margin: 0.5em 0 0 0;
-  }
-}
+
 #contact {
-  background-color: #f5f5f5;
+  background-color: #FFFFFF;
 }
 .contactform {
   textarea {
     width: 100%;
     padding: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid @brand-primary;
     margin-bottom: 1em;
     border-radius: 0;
     outline: none;
@@ -320,14 +259,14 @@ p {
   input {
     width: 100%;
     padding: 1em;
-    border: 1px solid #ccc;
+    border: 1px solid @brand-primary;
     margin-bottom: 1em;
     border-radius: 0;
     outline: none;
   }
 }
 .footer {
-  background-color: #111;
+  background-color: @brand-secondary;
   color: @color_3;
   font-size: 1em;
   color: @color_8;
@@ -482,9 +421,6 @@ p {
     text-align: left;
     font-size: 1.7em;
   }
-  h4 {
-    font: 300 1.2em Roboto,Arial,Helvetica;
-  }
   #partners {
     h2 {
       padding: 0 1em;
@@ -512,11 +448,6 @@ p {
       li {
         margin-bottom: 1em;
       }
-    }
-  }
-  .highlight-info {
-    .overlay {
-      padding-bottom: 2em;
     }
   }
   .grid.team {

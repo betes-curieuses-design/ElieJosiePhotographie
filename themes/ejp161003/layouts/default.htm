@@ -9,13 +9,11 @@ description = "Default Layout"
 <meta name="keywords" content="{{ this.page.meta_keywords }}" />
 <meta name="author" content="{{ this.page.meta_author }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>{{ this.page.title }}</title>
+<title>Élie & Josie Photographie</title>
 <!-- Google fonts -->
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
 {% styles %}
 <link href="{{ [
-            'assets/vendor/animate/animate.css',
-            'assets/vendor/animate/set.css',
 			'assets/vendor/gallery/blueimp-gallery.min.css',
 			'assets/css/theme.css']|theme }}" rel="stylesheet">
 <!-- font awesome -->
@@ -31,7 +29,7 @@ description = "Default Layout"
 	{% partial "nav" %}
 </div>
 
-<div id="works" class=" clearfix grid">
+<div id="portfolio" class=" clearfix grid">
 	{% partial "works" %}
 </div>
 
@@ -39,14 +37,15 @@ description = "Default Layout"
 	{% partial "intro" %}
 </div>
 
-<div class="highlight-info">
-	{% partial "about" %}
+<div id="team" class="container spacer about">
+	{% partial "team" %}
 </div>
 
+<section>
 <div id="partners" class="container spacer ">
 	{% partial "clients" %}
 </div>
-
+</section>
 <div id="contact" class="spacer">
 	{% partial "contacts" %}
 </div>

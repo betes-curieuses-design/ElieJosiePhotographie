@@ -4,48 +4,54 @@
 
 // Headings
 // -------------------------
+@import "../../vendor/bootstrap/less/variables";
+@import "../theme/variables";
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Noto Serif';;
-    font-weight: @headings-font-weight;
-    line-height: @headings-line-height;
-    color: @headings-color;
-    
-    small {
-        color: @headings-small-color;
+h1 {
+    margin: 0;
+    line-height: 1em;
+    font: 5em 'euphoria_scriptregular';
+    margin: 0.25em 0;
+}
+h2 {
+    margin: 0;
+    line-height: 1em;
+    font: 2.5em 'euphoria_scriptregular';
+    margin-bottom: 1.5em;
+}
+h3 {
+    margin: 0;
+    line-height: 1em;
+    font: 2em 'euphoria_scriptregular';
+    margin: 2em 0 1em 0;
+}
+h4 {
+    margin: 0;
+    line-height: 1em;
+    font: 1.5em 'quicksand';
+    margin-bottom: 1em;
+    i {
+        margin-right: 0.5em;
     }
 }
 
-h1,
-h2,
-h3 {
-    margin-top: @line-height-computed;
-    margin-bottom: (@line-height-computed / 2);
+h5 {
+    margin: 0;
+    line-height: 1em;
+    font: 1.5em 'quicksand';
+    margin-bottom: 1em;
+    i {
+        margin-right: 0.5em;
+    }
 }
-h4,
-h5,
 h6 {
-    margin-top: (@line-height-computed / 2);
-    margin-bottom: (@line-height-computed / 2);
-}
-
-h6 {
-    font-weight: normal;
-}
-
-h1, .h1 { font-size: @font-size-h1; } // ~62px
-h2, .h2 { font-size: @font-size-h2; } // ~52px
-h3, .h3 { font-size: @font-size-h3; } // ~40px
-h4, .h4 { font-size: @font-size-h4; } // ~29px
-h5, .h5 { font-size: @font-size-h5; } // ~28px 
-h6, .h6 { font-size: @font-size-h6; } // ~24px
-
-a {
-    -webkit-transition: 0.25s;
-    -moz-transition: 0.25s;
-    -o-transition: 0.25s;
-    transition: 0.25s;
+    margin: 0;
+    line-height: 1em;
+    font: 1.5em 'quicksand';
+    margin-bottom: 1em;
+    i {
+        margin-right: 0.5em;
+    }
 }
 
 
@@ -53,20 +59,10 @@ a {
 // -------------------------
 
 p {
-    font-size:   @font-size-base;
-    line-height: @line-height-base;
-    margin: 0 0 (@line-height-computed / 2);
-}
-
-.lead {
-    margin-bottom: @line-height-computed;
-    font-size:   floor(@font-size-base * 1.556);  // ~28px
-    line-height: 1.46428571;                      // ~41px
-    font-weight: 300;
-
-    @media (min-width: @screen-sm-min) {
-        font-size: (@font-size-base * 1.667);       // ~30px
-    }
+    font: 500 15px/15px 'Quicksand', sans-serif;
+    font-size: 1em;
+    line-height: 1.7em;
+    margin-bottom: 1.7em;
 }
 
 // Emphasis & misc
@@ -83,44 +79,44 @@ small,
 .text-muted {
     color: @text-muted;
 }
-.text-inverse {
-    color: @inverse;
-}
-.text-primary {
-    .text-emphasis-variant(@brand-primary);
-}
-.text-warning {
-    .text-emphasis-variant(@state-warning-text);
-}
-.text-danger {
-    .text-emphasis-variant(@state-danger-text);
-}
-.text-success {
-    .text-emphasis-variant(@state-success-text);
-}
-.text-info {
-    .text-emphasis-variant(@state-info-text);
-}
+//.text-inverse {
+   // color: @inverse;
+//}
+//.text-primary {
+   // .text-emphasis-variant(@brand-primary);
+//}
+//.text-warning {
+    //.text-emphasis-variant(@state-warning-text);
+//}
+//.text-danger {
+    //.text-emphasis-variant(@state-danger-text);
+//}
+//.text-success {
+   //.text-emphasis-variant(@state-success-text);
+//}
+//.text-info {
+   // .text-emphasis-variant(@state-info-text);
+//}
 
 // Contextual backgrounds
-.bg-primary {
-    // Given the contrast here, this is the only class to have its color inverted
-    // automatically.
-    color: @inverse;
-    .bg-variant(@brand-primary);
-}
-.bg-success {
-    .bg-variant(@state-success-bg);
-}
-.bg-info {
-    .bg-variant(@state-info-bg);
-}
-.bg-warning {
-    .bg-variant(@state-warning-bg);
-}
-.bg-danger {
-    .bg-variant(@state-danger-bg);
-}
+//.bg-primary {
+//    // Given the contrast here, this is the only class to have its color inverted
+//    // automatically.
+//    color: @inverse;
+//    .bg-variant(@brand-primary);
+//}
+//.bg-success {
+//    .bg-variant(@state-success-bg);
+//}
+//.bg-info {
+//    .bg-variant(@state-info-bg);
+//}
+//.bg-warning {
+//    .bg-variant(@state-warning-bg);
+//}
+//.bg-danger {
+//    .bg-variant(@state-danger-bg);
+//}
 
 
 // Page header
