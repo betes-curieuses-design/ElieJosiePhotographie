@@ -8,6 +8,11 @@ use Doctrine\Common\Cache\ChainCache;
 
 class ChainCacheTest extends CacheTest
 {
+    public function testLifetime()
+    {
+        $this->markTestSkipped('The ChainCache test uses ArrayCache which does not implement TTL currently.');
+    }
+
     public function testGetStats()
     {
         $cache = $this->_getCacheDriver();

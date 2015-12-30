@@ -1,3 +1,6 @@
+.field-mediafinder {
+  overflow: hidden;
+}
 .field-mediafinder .find-object {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -84,7 +87,7 @@
   border: 2px dotted rgba(0, 0, 0, 0.2);
 }
 .field-mediafinder.style-image-single .find-button:hover .find-button-icon:before {
-  color: #5cb85c;
+  color: #31ac5f;
   color: rgba(0, 0, 0, 0.2);
 }
 .field-mediafinder.style-image-single .find-button:focus {
@@ -92,7 +95,7 @@
   background: transparent;
 }
 .field-mediafinder.style-image-single .find-button:focus .find-button-icon:before {
-  color: #5cb85c;
+  color: #31ac5f;
   color: rgba(0, 0, 0, 0.2);
 }
 .field-mediafinder.style-image-single .find-object {

@@ -24,7 +24,7 @@
 }
 .field-colorpicker > ul li:hover span,
 .field-colorpicker > ul li.active span {
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
 }
 .field-colorpicker > ul li.custom-color {
   position: relative;

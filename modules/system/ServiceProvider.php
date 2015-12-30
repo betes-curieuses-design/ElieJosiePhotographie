@@ -315,7 +315,7 @@ class ServiceProvider extends ModuleServiceProvider
          * - extensions: png,jpg,txt
          */
         Validator::extend('extensions', function($attribute, $value, $parameters) {
-            $extension = $value->getClientOriginalExtension();
+            $extension = strtolower($value->getClientOriginalExtension());
             return in_array($extension, $parameters);
         });
 

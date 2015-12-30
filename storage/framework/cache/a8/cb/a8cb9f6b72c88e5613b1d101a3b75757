@@ -1,11 +1,11 @@
-1450285101s:2763:"a:6:{s:5:"mtime";i:1419784316;s:7:"content";s:1304:"<!-- Header Starts -->
+1451514954s:3205:"a:6:{s:5:"mtime";i:1451503326;s:7:"content";s:1525:"<!-- Header Starts -->
       <div class="container">
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
-              <a class="navbar-brand" href="#works"><img src="{{ 'assets/images/logo.png'|theme }}" alt="logo"></a>
+              <a class="navbar-brand" href="{{ 'home'| page }}/#portfolio"><img src="{{ 'assets/images/logo.png'|theme }}" alt="logo"></a>
               <!-- #Logo Ends -->
 
 
@@ -20,11 +20,14 @@
 
 
             <!-- Nav Starts -->
-            <div class="navbar-collapse  collapse">
+            <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right scroll">
-                 <li class="active"><a href="#works">Home</a></li>
-                 <li ><a href="#about">About</a></li>
-                 <li ><a href="#partners">Partners</a></li>
+                  <li><a href="{{ 'home'| page }}/#portfolio">Portfolio</a></li>
+                  <li><a href="{{ 'home'| page }}/#about">À propos</a></li>
+                  <li ><a href="#">Blogue</a></li>
+                  <li ><a href="#">Tarif</a></li>
+                  <li ><a href="{{ 'faq'| page }}">FAQ</a></li>
+                 <li ><a href="#">Espace Client</a></li>
                  <li ><a href="#contact">Contact</a></li>
               </ul>
             </div>
@@ -35,14 +38,14 @@
 
       </div>
 <!-- #Header Ends -->
-";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:1303:"<!-- Header Starts -->
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:1524:"<!-- Header Starts -->
       <div class="container">
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
-              <a class="navbar-brand" href="#works"><img src="{{ 'assets/images/logo.png'|theme }}" alt="logo"></a>
+              <a class="navbar-brand" href="{{ 'home'| page }}/#portfolio"><img src="{{ 'assets/images/logo.png'|theme }}" alt="logo"></a>
               <!-- #Logo Ends -->
 
 
@@ -57,11 +60,14 @@
 
 
             <!-- Nav Starts -->
-            <div class="navbar-collapse  collapse">
+            <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right scroll">
-                 <li class="active"><a href="#works">Home</a></li>
-                 <li ><a href="#about">About</a></li>
-                 <li ><a href="#partners">Partners</a></li>
+                  <li><a href="{{ 'home'| page }}/#portfolio">Portfolio</a></li>
+                  <li><a href="{{ 'home'| page }}/#about">À propos</a></li>
+                  <li ><a href="#">Blogue</a></li>
+                  <li ><a href="#">Tarif</a></li>
+                  <li ><a href="{{ 'faq'| page }}">FAQ</a></li>
+                 <li ><a href="#">Espace Client</a></li>
                  <li ><a href="#contact">Contact</a></li>
               </ul>
             </div>

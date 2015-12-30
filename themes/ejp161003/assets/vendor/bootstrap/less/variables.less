@@ -36,7 +36,7 @@
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
-@link-hover-decoration: underline;
+@link-hover-decoration: none !important;
 
 
 //== Typography
@@ -710,12 +710,12 @@
 @panel-border-radius:         @border-radius-base;
 
 //** Border color for elements within panels
-@panel-inner-border:          #ddd;
+@panel-inner-border:          @brand-primary;
 @panel-footer-bg:             #f5f5f5;
 
-@panel-default-text:          @gray-dark;
-@panel-default-border:        #ddd;
-@panel-default-heading-bg:    #f5f5f5;
+@panel-default-text:          @white;
+@panel-default-border:        @brand-primary;
+@panel-default-heading-bg:    @brand-primary;
 
 @panel-primary-text:          #fff;
 @panel-primary-border:        @brand-primary;

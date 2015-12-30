@@ -1,5 +1,5 @@
 .pika-single {
-  border-color: #5fb6f5;
+  border-color: #4da7e8;
   border-radius: 2px;
   font-size: 12px;
   margin-top: 5px;
@@ -35,5 +35,5 @@
   font-size: 12px;
 }
 .clockpicker-popover {
-    z-index: 9999;
+  z-index: 9999;
 }

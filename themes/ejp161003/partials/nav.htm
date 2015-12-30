@@ -5,7 +5,7 @@
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
-              <a class="navbar-brand" href="#portfolio"><img src="{{ 'assets/images/logo.png'|theme }}" alt="logo"></a>
+              <a class="navbar-brand" href="{{ 'home'| page }}/#portfolio"><img src="{{ 'assets/images/logo.png'|theme }}" alt="logo"></a>
               <!-- #Logo Ends -->
 
 
@@ -20,13 +20,13 @@
 
 
             <!-- Nav Starts -->
-            <div class="navbar-collapse  collapse">
+            <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right scroll">
-                  <li><a href="#portfolio">Portfolio</a></li>
-                 <li><a href="#about">À propos</a></li>
+                  <li><a href="{{ 'home'| page }}/#portfolio">Portfolio</a></li>
+                  <li><a href="{{ 'home'| page }}/#about">À propos</a></li>
                   <li ><a href="#">Blogue</a></li>
                   <li ><a href="#">Tarif</a></li>
-                  <li ><a href="#">FAQ</a></li>
+                  <li ><a href="{{ 'faq'| page }}">FAQ</a></li>
                  <li ><a href="#">Espace Client</a></li>
                  <li ><a href="#contact">Contact</a></li>
               </ul>

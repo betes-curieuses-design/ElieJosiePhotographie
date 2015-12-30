@@ -55,7 +55,7 @@ class User extends Model
     /**
      * @var array The attributes that aren't mass assignable.
      */
-    protected $guarded = ['reset_password_code', 'activation_code', 'persist_code'];
+    protected $guarded = ['is_superuser', 'reset_password_code', 'activation_code', 'persist_code'];
     /**
      * @var array List of attribute names which should be hashed using the Bcrypt hashing algorithm.
      */
@@ -121,8 +121,9 @@ class User extends Model
      */
     public function afterDelete()
     {
-        if ($this->hasRelation('groups'))
+        if ($this->hasRelation('groups')) {
             $this->groups()->detach();
+        }
     }
 
     /**
@@ -132,8 +133,9 @@ class User extends Model
      */
     public function checkPersistCode($persistCode)
     {
-        if (!$persistCode)
+        if (!$persistCode) {
             return false;
+        }
 
         return $persistCode == $this->persist_code;
     }
@@ -393,7 +395,12 @@ class User extends Model
      */
     public function isSuperUser()
     {
-        return $this->hasPermission('superuser');
+        // This comment and line below should be removed if year >= 2017
+        // It is kept here to fix an issue in Build 309+ where the user sees
+        // an access denied screen after updating and they need to relog to fix
+        if ($this->hasPermission('superuser')) return true;
+
+        return (bool) $this->is_superuser;
     }
 
     /**
@@ -415,8 +422,9 @@ class User extends Model
     {
         $mergedPermissions = $this->getMergedPermissions();
 
-        if (!is_array($permissions))
+        if (!is_array($permissions)) {
             $permissions = [$permissions];
+        }
 
         foreach ($permissions as $permission) {
             // We will set a flag now for whether this permission was
@@ -495,8 +503,9 @@ class User extends Model
             }
         }
 
-        if ($all === false)
+        if ($all === false) {
             return false;
+        }
 
         return true;
     }
@@ -535,14 +544,16 @@ class User extends Model
     {
         $permissions = json_decode($permissions, true);
         foreach ($permissions as $permission => &$value) {
-            if (!in_array($value = (int)$value, $this->allowedPermissionsValues))
+            if (!in_array($value = (int) $value, $this->allowedPermissionsValues)) {
                 throw new InvalidArgumentException(sprintf('Invalid value "%s" for permission "%s" given.', $value, $permission));
+            }
 
-            if ($value === 0)
+            if ($value === 0) {
                 unset($permissions[$permission]);
+            }
         }
 
-        $this->attributes['permissions'] = (!empty($permissions)) ? json_encode($permissions) : '';
+        $this->attributes['permissions'] = !empty($permissions) ? json_encode($permissions) : '';
     }
 
     //

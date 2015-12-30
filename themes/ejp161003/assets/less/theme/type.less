@@ -16,8 +16,8 @@ h1 {
 h2 {
     margin: 0;
     line-height: 1em;
-    font: 2.5em 'euphoria_scriptregular';
-    margin-bottom: 1.5em;
+    font: 3.5em 'euphoria_scriptregular';
+    margin-bottom: 1em;
 }
 h3 {
     margin: 0;
@@ -29,7 +29,7 @@ h4 {
     margin: 0;
     line-height: 1em;
     font: 1.5em 'quicksand';
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     i {
         margin-right: 0.5em;
     }
@@ -215,4 +215,10 @@ blockquote {
 address {
     margin-bottom: @line-height-computed;
     line-height: @line-height-base;
+}
+
+@media (max-width: 360px){
+    h1 {
+        font: 4em 'euphoria_scriptregular'!important;
+    }
 }

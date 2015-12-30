@@ -25,24 +25,32 @@ class __TwigTemplate_82e0c57e601469044d26ca140091d4a579df325e071015f70f82e5e7fe9
 
     public function getDebugInfo()
     {
-        return array (  23 => 3,  19 => 1,);
+        return array (  28 => 8,  19 => 1,);
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
         echo "<!-- Footer Starts -->
-<p class=\"wowload flipInX\"><a href=\"#\"><i class=\"fa fa-facebook fa-2x\"></i></a> <a href=\"#\"><i class=\"fa fa-instagram fa-2x\"></i></a> <a href=\"#\"><i class=\"fa fa-twitter fa-2x\"></i></a> <a href=\"#\"><i class=\"fa fa-flickr fa-2x\"></i></a> </p>
-<p class=\"power\">Copyright &copy; ";
-        // line 3
+<p class=\"wowload flipInX\">
+    <a href=\"https://www.facebook.com/Élie-Josie-photographie-448359348562018\"><i class=\"fa fa-facebook-square fa-2x text-primary\"></i></a>
+    <a href=\"#\"><i class=\"fa fa-linkedin-square fa-2x text-primary\"></i></a>
+    <a href=\"https://www.pinterest.com/liejosiephotogr/\"><i class=\"fa fa-pinterest-square fa-2x text-primary\"></i></a>
+    <a href=\"https://plus.google.com/106047593105793158276/\"><i class=\"fa fa-google-plus-square fa-2x text-primary\"></i></a>
+</p>
+<p class=\"power\">&copy; ";
+        // line 8
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
-        echo " ";
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "theme", array()), "site_name", array()), "html", null, true);
-        echo ". All Rights Reserved. &#123;&#123; Powered by <a href=\"http://octobercms.com/\">OctoberCMS</a> &#125;&#125;</p>
+        echo " Élie & Josie Photographie | Réalisation par <a href=\"http://www.betescurieuses.com\" target=\"_blank\">Bêtes Curieuses Design</a></p>
 <!-- # Footer Ends -->";
     }
 }
 /* <!-- Footer Starts -->*/
-/* <p class="wowload flipInX"><a href="#"><i class="fa fa-facebook fa-2x"></i></a> <a href="#"><i class="fa fa-instagram fa-2x"></i></a> <a href="#"><i class="fa fa-twitter fa-2x"></i></a> <a href="#"><i class="fa fa-flickr fa-2x"></i></a> </p>*/
-/* <p class="power">Copyright &copy; {{ "now"|date("Y") }} {{ this.theme.site_name }}. All Rights Reserved. &#123;&#123; Powered by <a href="http://octobercms.com/">OctoberCMS</a> &#125;&#125;</p>*/
+/* <p class="wowload flipInX">*/
+/*     <a href="https://www.facebook.com/Élie-Josie-photographie-448359348562018"><i class="fa fa-facebook-square fa-2x text-primary"></i></a>*/
+/*     <a href="#"><i class="fa fa-linkedin-square fa-2x text-primary"></i></a>*/
+/*     <a href="https://www.pinterest.com/liejosiephotogr/"><i class="fa fa-pinterest-square fa-2x text-primary"></i></a>*/
+/*     <a href="https://plus.google.com/106047593105793158276/"><i class="fa fa-google-plus-square fa-2x text-primary"></i></a>*/
+/* </p>*/
+/* <p class="power">&copy; {{ "now"|date("Y") }} Élie & Josie Photographie | Réalisation par <a href="http://www.betescurieuses.com" target="_blank">Bêtes Curieuses Design</a></p>*/
 /* <!-- # Footer Ends -->*/

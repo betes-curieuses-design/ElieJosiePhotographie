@@ -1,6 +1,7 @@
 <?php namespace Backend\FormWidgets;
 
 use Carbon\Carbon;
+use Backend\Classes\FormField;
 use Backend\Classes\FormWidgetBase;
 
 /**
@@ -128,6 +129,10 @@ class DatePicker extends FormWidgetBase
      */
     public function getSaveValue($value)
     {
+        if ($this->formField->disabled) {
+            return FormField::NO_SAVE_DATA;
+        }
+
         if (!strlen($value)) {
             return null;
         }

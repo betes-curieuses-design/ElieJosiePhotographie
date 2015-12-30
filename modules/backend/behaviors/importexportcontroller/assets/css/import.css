@@ -39,8 +39,8 @@
 .import-behavior ul li.dragged,
 .import-behavior .import-file-columns > ul > li,
 .import-behavior .import-db-columns > ul > li {
-  background: #ffffff;
-  border: 1px solid #cccccc;
+  background: #fff;
+  border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 5px;
 }
@@ -133,7 +133,7 @@
   height: 0;
   border-top: 17px solid transparent;
   border-bottom: 17px solid transparent;
-  border-left: 18px solid #ffffff;
+  border-left: 18px solid #fff;
   position: absolute;
   top: 0;
   left: 0;

@@ -25,12 +25,9 @@ class MemcacheCacheTest extends CacheTest
         return $ids;
     }
 
-    public function testNoExpire()
+    public function testGetMemcacheReturnsInstanceOfMemcache()
     {
-        $cache = $this->_getCacheDriver();
-        $cache->save('noexpire', 'value', 0);
-        sleep(1);
-        $this->assertTrue($cache->contains('noexpire'), 'Memcache provider should support no-expire');
+        $this->assertInstanceOf('Memcache', $this->_getCacheDriver()->getMemcache());
     }
 
     /**
@@ -41,18 +38,6 @@ class MemcacheCacheTest extends CacheTest
         $driver = new MemcacheCache();
         $driver->setMemcache($this->memcache);
         return $driver;
-    }
-
-    public function testLongLifetime()
-    {
-        $cache = $this->_getCacheDriver();
-        $cache->save('key', 'value', 30 * 24 * 3600 + 1);
-        $this->assertTrue($cache->contains('key'), 'Memcache provider should support TTL > 30 days');
-    }
-
-    public function testGetMemcacheReturnsInstanceOfMemcache()
-    {
-        $this->assertInstanceOf('Memcache', $this->_getCacheDriver()->getMemcache());
     }
 
     protected function setUp()

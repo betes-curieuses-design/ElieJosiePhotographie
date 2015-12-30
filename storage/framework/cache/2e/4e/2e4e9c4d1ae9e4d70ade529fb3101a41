@@ -1,196 +1,62 @@
-1450285101s:9733:"a:6:{s:5:"mtime";i:1419784316;s:7:"content";s:4789:"<!-- works -->
+1451511414s:2885:"a:6:{s:5:"mtime";i:1451490824;s:7:"content";s:1365:"<!-- works -->
     <figure class="effect-oscar  wowload fadeIn">
-        <img src="{{ 'assets/images/portfolio/1.jpg'|theme }}" alt="img01" />
+        <img src="{{ 'assets/images/ejp-pf-main-mariage.jpg'|theme }}" alt="img01" />
         <figcaption>
-            <h2>Nature</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/1.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Mariage</h4>
+            <p><a href="mariage.htm" title="Section du portfolio, mariage.">Voir nos photos</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/2.jpg'|theme }}" alt="img01" />
+        <img src="{{ 'assets/images/ejp-pf-main-portrait.jpg'|theme }}" alt="img01" />
         <figcaption>
-            <h2>Events</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/2.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Portrait</h4>
+            <p><a href="portrait.htm" title="Section du portfolio, portrait.">Voir nos photos</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/3.jpg'|theme }}" alt="img01"/>
+        <img src="{{ 'assets/images/ejp-pf-main-corporatif.jpg'|theme }}" alt="img01"/>
         <figcaption>
-            <h2>music</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/3.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Corporatif</h4>
+            <p><a href="corporatif.htm" title="Section du portfolio, corporatif">Voir nos photos</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/4.jpg'|theme }}" alt="img01"/>
+        <img src="{{ 'assets/images/ejp-pf-main-famille.jpg'|theme }}" alt="img01"/>
         <figcaption>
-            <h2>Vintage</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/4.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Famille & Maternité</h4>
+            <p><a href="famille.htm" title="Section du portfolio, famille et maternité.">Voir nos photos</a></p>
         </figcaption>
     </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/5.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Typers</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/5.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/6.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>hotel</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/6.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/7.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Chinese</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/7.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/8.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Dicrap</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/8.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/9.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Coffee</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/9.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/10.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>cameras</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/10.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/11.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>design</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/11.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/12.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>studio</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/12.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
+
 <!-- works -->
-";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:4788:"<!-- works -->
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:1364:"<!-- works -->
     <figure class="effect-oscar  wowload fadeIn">
-        <img src="{{ 'assets/images/portfolio/1.jpg'|theme }}" alt="img01" />
+        <img src="{{ 'assets/images/ejp-pf-main-mariage.jpg'|theme }}" alt="img01" />
         <figcaption>
-            <h2>Nature</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/1.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Mariage</h4>
+            <p><a href="mariage.htm" title="Section du portfolio, mariage.">Voir nos photos</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/2.jpg'|theme }}" alt="img01" />
+        <img src="{{ 'assets/images/ejp-pf-main-portrait.jpg'|theme }}" alt="img01" />
         <figcaption>
-            <h2>Events</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/2.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Portrait</h4>
+            <p><a href="portrait.htm" title="Section du portfolio, portrait.">Voir nos photos</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/3.jpg'|theme }}" alt="img01"/>
+        <img src="{{ 'assets/images/ejp-pf-main-corporatif.jpg'|theme }}" alt="img01"/>
         <figcaption>
-            <h2>music</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/3.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Corporatif</h4>
+            <p><a href="corporatif.htm" title="Section du portfolio, corporatif">Voir nos photos</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/4.jpg'|theme }}" alt="img01"/>
+        <img src="{{ 'assets/images/ejp-pf-main-famille.jpg'|theme }}" alt="img01"/>
         <figcaption>
-            <h2>Vintage</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/4.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
+            <h4>Famille & Maternité</h4>
+            <p><a href="famille.htm" title="Section du portfolio, famille et maternité.">Voir nos photos</a></p>
         </figcaption>
     </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/5.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Typers</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/5.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/6.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>hotel</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/6.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/7.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Chinese</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/7.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/8.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Dicrap</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/8.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/9.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>Coffee</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/9.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/10.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>cameras</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/10.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/11.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>design</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/11.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-    <figure class="effect-oscar  wowload fadeInUp">
-        <img src="{{ 'assets/images/portfolio/12.jpg'|theme }}" alt="img01"/>
-        <figcaption>
-            <h2>studio</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="{{ 'assets/images/portfolio/12.jpg'|theme }}" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
+
 <!-- works -->";}";

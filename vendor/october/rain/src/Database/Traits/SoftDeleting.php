@@ -83,6 +83,17 @@ trait SoftDeleting
     }
 
     /**
+     * Helper method to check if the model is currently
+     * being hard or soft deleted, useful in events.
+     *
+     * @return bool
+     */
+    public function isSoftDelete()
+    {
+        return !$this->forceDeleting;
+    }
+
+    /**
      * Force a hard delete on a soft deleted model.
      *
      * @return void
@@ -140,11 +151,10 @@ trait SoftDeleting
     protected function performDeleteOnModel()
     {
         if ($this->forceDeleting) {
-            $this->withTrashed()->where($this->getKeyName(), $this->getKey())->forceDelete();
+            return $this->withTrashed()->where($this->getKeyName(), $this->getKey())->forceDelete();
         }
-        else {
-            return $this->runSoftDelete();
-        }
+
+        return $this->runSoftDelete();
     }
 
     /**
@@ -180,6 +190,5 @@ trait SoftDeleting
     {
         return defined('static::DELETED_AT') ? static::DELETED_AT : 'deleted_at';
     }
-
 
 }

@@ -1,70 +1,48 @@
-1450285101s:3379:"a:6:{s:5:"mtime";i:1419784316;s:7:"content";s:1612:"<!-- Cirlce Starts -->
-<h2 class="text-center wowload fadeInUp">Creative digital agency based on London</h2>  
+1451511414s:2725:"a:6:{s:5:"mtime";i:1451421196;s:7:"content";s:1285:"<h1 class="text-center wowload fadeInUp text-primary">Élie & Josie Photographie</h1>
   <div class="row">
-  <div class="col-sm-6 wowload fadeInLeft">
-    <h4><i class="fa fa-paint-brush"></i> Design</h4>
-    <p>Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs, lead by passionate and uber progressive team that lives and breathes design. Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs.</p>
-  </div>
-  
-  <div class="col-sm-6 wowload fadeInRight">
-  <h4><i class="fa fa-code"></i> Frontend & Backend Development</h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>    
-  </div>
+  <div class="col-sm-12 wowload fadeInLeft">
+    <p>
+        Qui est «Élie & Josie»? 2 complices évoluant dans le domaine des arts graphiques. Deux photographes voulant
+        vous faire rentrer dans leur monde visuel. 2 filles formant un tout.</p>
+      <p>
+        Pourquoi choisir «Élie & Josie»? Pour l’ambiance de travail chaleureuse, le service personnalisé, l’écoute que
+        nous portons à nos clients et le souci de leur satisfaction.
+      </p>
+      <p>
+        Laissez-vous porter par la magie du moment capté en une photographie. Notre style se distingue par sa
+        simplicité et sa pureté. L’étincelle dans le regard, la spontanéité de l’expression d’une personne et son
+        charisme naturel sont les éléments que nous recherchons lors de nos séances. Notre but est de vous mettre
+        à l’aise face à l’appareil et ce, non seulement par notre patience, mais également grâce à la passion que nous
+        avons pour notre métier.
+      </p>
+      <p>
+        Capter un instant afin de le conserver en un souvenir mémorable.
+    </p>
+      <h3 style="margin: 0!important;">Élie & Josie</h3>
   </div>
 
-  <div class="process">
-  <h3 class="text-center wowload fadeInUp">Process</h3>
-  <ul class="row text-center list-inline  wowload bounceInUp">
-      <li>
-            <span><i class="fa fa-history"></i><b>Research</b></span>
-        </li>
-        <li>
-            <span><i class="fa fa-puzzle-piece"></i><b>Plan</b></span>
-        </li>
-        <li>
-            <span><i class="fa fa-database"></i><b>Develop</b></span>
-        </li>
-        <li>
-            <span><i class="fa fa-magic"></i><b>Integration</b></span>
-        </li>        
-        <li>
-            <span><i class="fa fa-cloud-upload"></i><b>Deliver</b></span>
-        </li>
-    </ul>
   </div>
-<!-- #Cirlce Ends -->
-";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:1611:"<!-- Cirlce Starts -->
-<h2 class="text-center wowload fadeInUp">Creative digital agency based on London</h2>  
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:1284:"<h1 class="text-center wowload fadeInUp text-primary">Élie & Josie Photographie</h1>
   <div class="row">
-  <div class="col-sm-6 wowload fadeInLeft">
-    <h4><i class="fa fa-paint-brush"></i> Design</h4>
-    <p>Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs, lead by passionate and uber progressive team that lives and breathes design. Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs.</p>
-  </div>
-  
-  <div class="col-sm-6 wowload fadeInRight">
-  <h4><i class="fa fa-code"></i> Frontend & Backend Development</h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>    
-  </div>
+  <div class="col-sm-12 wowload fadeInLeft">
+    <p>
+        Qui est «Élie & Josie»? 2 complices évoluant dans le domaine des arts graphiques. Deux photographes voulant
+        vous faire rentrer dans leur monde visuel. 2 filles formant un tout.</p>
+      <p>
+        Pourquoi choisir «Élie & Josie»? Pour l’ambiance de travail chaleureuse, le service personnalisé, l’écoute que
+        nous portons à nos clients et le souci de leur satisfaction.
+      </p>
+      <p>
+        Laissez-vous porter par la magie du moment capté en une photographie. Notre style se distingue par sa
+        simplicité et sa pureté. L’étincelle dans le regard, la spontanéité de l’expression d’une personne et son
+        charisme naturel sont les éléments que nous recherchons lors de nos séances. Notre but est de vous mettre
+        à l’aise face à l’appareil et ce, non seulement par notre patience, mais également grâce à la passion que nous
+        avons pour notre métier.
+      </p>
+      <p>
+        Capter un instant afin de le conserver en un souvenir mémorable.
+    </p>
+      <h3 style="margin: 0!important;">Élie & Josie</h3>
   </div>
 
-  <div class="process">
-  <h3 class="text-center wowload fadeInUp">Process</h3>
-  <ul class="row text-center list-inline  wowload bounceInUp">
-      <li>
-            <span><i class="fa fa-history"></i><b>Research</b></span>
-        </li>
-        <li>
-            <span><i class="fa fa-puzzle-piece"></i><b>Plan</b></span>
-        </li>
-        <li>
-            <span><i class="fa fa-database"></i><b>Develop</b></span>
-        </li>
-        <li>
-            <span><i class="fa fa-magic"></i><b>Integration</b></span>
-        </li>        
-        <li>
-            <span><i class="fa fa-cloud-upload"></i><b>Deliver</b></span>
-        </li>
-    </ul>
-  </div>
-<!-- #Cirlce Ends -->";}";
+  </div>";}";

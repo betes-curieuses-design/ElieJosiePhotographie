@@ -12,29 +12,6 @@ class CouchbaseCacheTest extends CacheTest
 {
     private $couchbase;
 
-    public function testNoExpire()
-    {
-        $cache = $this->_getCacheDriver();
-        $cache->save('noexpire', 'value', 0);
-        sleep(1);
-        $this->assertTrue($cache->contains('noexpire'), 'Couchbase provider should support no-expire');
-    }
-
-    protected function _getCacheDriver()
-    {
-        $driver = new CouchbaseCache();
-        $driver->setCouchbase($this->couchbase);
-        return $driver;
-    }
-
-    public function testLongLifetime()
-    {
-        $cache = $this->_getCacheDriver();
-        $cache->save('key', 'value', 30 * 24 * 3600 + 1);
-
-        $this->assertTrue($cache->contains('key'), 'Couchbase provider should support TTL > 30 days');
-    }
-
     protected function setUp()
     {
         try {
@@ -42,5 +19,12 @@ class CouchbaseCacheTest extends CacheTest
         } catch(Exception $ex) {
              $this->markTestSkipped('Could not instantiate the Couchbase cache because of: ' . $ex);
         }
+    }
+
+    protected function _getCacheDriver()
+    {
+        $driver = new CouchbaseCache();
+        $driver->setCouchbase($this->couchbase);
+        return $driver;
     }
 }

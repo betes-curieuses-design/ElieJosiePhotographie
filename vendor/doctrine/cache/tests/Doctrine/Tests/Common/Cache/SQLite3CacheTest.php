@@ -27,16 +27,6 @@ class SQLite3Test extends CacheTest
         return new SQLite3Cache($this->sqlite, 'test_table');
     }
 
-    public function testFetchSingle()
-    {
-        $id   = uniqid('sqlite3_id_');
-        $data = "\0"; // produces null bytes in serialized format
-
-        $this->_getCacheDriver()->save($id, $data, 30);
-
-        $this->assertEquals($data, $this->_getCacheDriver()->fetch($id));
-    }
-
     protected function setUp()
     {
         $this->file = tempnam(null, 'doctrine-cache-test-');

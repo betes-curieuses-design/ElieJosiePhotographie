@@ -22,6 +22,7 @@ a {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     outline: none !important;
+    text-decoration: none;
   }
 }
 .btn {
@@ -42,10 +43,10 @@ a {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     outline: none !important;
-    color: @color_3;
+    color: @white;
   }
   &:active {
-    color: @color_3;
+    color: @white;
   }
 }
 
@@ -145,6 +146,9 @@ a {
 .carousel-control {
   z-index: 1000;
 }
+#about{
+  padding-bottom: 50px;
+}
 
 .about.spacer {
   padding-left: 4em;
@@ -179,12 +183,13 @@ a {
 }
 section{
   background-color: #9CDBF5;
+  padding-bottom: 50px;
 }
 
 .partners {
   img {
     float: left;
-    margin: 0 75px 30px 0;
+    margin: -15px 75px 30px 0;
   }
 }
 .testimonails {
@@ -205,23 +210,32 @@ section{
   }
   bottom: 0;
 }
+.generalblock{
+  padding-top: 10em;
+}
+
 #portfolio {
   padding-top: 10em;
   figcaption {
     a {
       border: 1px solid @brand-primary;
-      margin-top: 1em;
+      margin-top: 0.25em;
       display: inline-block;
       font-weight: 700;
       color: @brand-primary;
       padding: 0 2em;
       &:hover {
         text-decoration: none;
-        padding: 0 3em;
+        padding: 0 2.25em;
       }
     }
   }
 }
+
+#team {
+  padding-bottom: 50px;
+}
+
 .team {
   figure {
     width: 100%;
@@ -235,7 +249,7 @@ section{
   }
   a {
     i.fa {
-      color: @color_3;
+      color: @white;
       font-size: 2em;
       &:hover {
         color: @color_5;
@@ -245,7 +259,7 @@ section{
 }
 
 #contact {
-  background-color: #FFFFFF;
+  background-color: @white;
 }
 .contactform {
   textarea {
@@ -267,7 +281,7 @@ section{
 }
 .footer {
   background-color: @brand-secondary;
-  color: @color_3;
+  color: @white;
   font-size: 1em;
   color: @color_8;
   a {
@@ -286,17 +300,23 @@ section{
   right: 20px;
   background: rgba(0,0,0,0.5);
   padding: 10px;
-  color: @color_3;
+  color: @white;
   i {
     line-height: 0.5em;
   }
 }
 @media (max-width: 1200px) {
-  body {
-    font: 300 13px/13px Roboto,Arial,Helvetica;
-  }
   .navbar-brand {
-    padding-top: 10px;
+    padding-top: 35px;
+  }
+  .navbar-nav {
+    >li {
+      >a {
+        font-size: 14px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
   }
   .process {
     ul {
@@ -308,7 +328,7 @@ section{
   .grid {
     figure {
       h2 {
-        font: 700 1.5em Roboto,Arial,Helvetica;
+        font: 700 1.5em;
       }
     }
   }
@@ -333,27 +353,12 @@ section{
       }
     }
   }
-  .partners {
-    img {
-      margin: 0 25px 25px 0;
-    }
-  }
 }
 @media (max-width: 900px) {
-  h1 {
-    font: 700 3.5em Roboto,Arial,Helvetica;
-  }
-  h4 {
-    font: 300 1.3em Roboto,Arial,Helvetica;
-  }
+
+
   .btn {
     padding: 1em 2em;
-  }
-  .partners {
-    img {
-      margin: 0 15px 25px 0;
-      width: 157px;
-    }
   }
   .process {
     ul {
@@ -389,9 +394,10 @@ section{
   }
 }
 @media (max-width: 767px) {
-  body {
-    font: 300 12px/12px Roboto,Arial,Helvetica;
-  }
+  .navbar-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
   .navbar-nav {
     >li {
       >a {
@@ -401,12 +407,10 @@ section{
   }
   .navbar-brand {
     padding: 7px;
-    img {
-      height: 37px;
-    }
+    height: 80px;
   }
   .navbar-toggle {
-    margin-top: 12px;
+    margin-top: 25px;
   }
   .carousel-caption {
     display: none;
@@ -417,17 +421,13 @@ section{
   .carousel-indicators {
     display: none;
   }
-  h2.text-center {
-    text-align: left;
-    font-size: 1.7em;
+
+  .generalblock {
+    padding-top: 8em;
   }
-  #partners {
-    h2 {
-      padding: 0 1em;
-    }
-  }
-  #works {
-    padding-top: 5em;
+
+  #portfolio {
+    padding-top: 8em;
   }
   .partners {
     display: block;
@@ -456,10 +456,10 @@ section{
       padding: 0;
     }
   }
-  figure.effect-chico {
-    figcaption {
-      padding: 1.5em;
-    }
+  figure.effect-oscar {
+  figcaption h4 {
+    font-size: 0.85em;
+  }
   }
   .footer {
     margin-top: 2em;

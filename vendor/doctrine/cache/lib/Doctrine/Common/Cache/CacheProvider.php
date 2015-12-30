@@ -163,21 +163,13 @@ abstract class CacheProvider implements Cache, FlushableCache, ClearableCache, M
     {
         $returnValues = array();
 
-        foreach ($keys as $index => $key) {
-            if (false !== ($item = $this->doFetch($key))) {
+        foreach ($keys as $key) {
+            if (false !== ($item = $this->doFetch($key)) || $this->doContains($key)) {
                 $returnValues[$key] = $item;
             }
         }
 
         return $returnValues;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function contains($id)
-    {
-        return $this->doContains($this->getNamespacedId($id));
     }
 
     /**
@@ -188,6 +180,14 @@ abstract class CacheProvider implements Cache, FlushableCache, ClearableCache, M
      * @return bool TRUE if a cache entry exists for the given cache id, FALSE otherwise.
      */
     abstract protected function doContains($id);
+
+    /**
+     * {@inheritdoc}
+     */
+    public function contains($id)
+    {
+        return $this->doContains($this->getNamespacedId($id));
+    }
 
     /**
      * {@inheritdoc}
