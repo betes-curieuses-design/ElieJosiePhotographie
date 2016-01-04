@@ -1,13 +1,11 @@
-1451511413s:4831:"a:6:{s:5:"mtime";i:1451502084;s:7:"content";s:2334:"description = "Default Layout"
+1451934777s:4577:"a:6:{s:5:"mtime";i:1451933378;s:7:"content";s:2207:"description = "Default Layout"
 ==
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="{{ this.page.meta_description }}" />
-<meta name="keywords" content="{{ this.page.meta_keywords }}" />
-<meta name="author" content="{{ this.page.meta_author }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Élie & Josie Photographie</title>
 <!-- Google fonts -->
@@ -25,7 +23,7 @@
 <body>
 <div class="topbar animated fadeInLeftBig"></div>
 
-<div class="navbar-wrapper">
+<div  id="top"  class="navbar-wrapper">
 	{% partial "nav" %}
 </div>
 
@@ -54,7 +52,7 @@
 	{% partial "footer" %}
 </div>
 
-<a href="#works" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+<a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
 
 <!-- Scripts -->
 <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
@@ -68,14 +66,12 @@
 {% scripts %}             
          
 </body>
-</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:2:{s:11:"description";s:14:"Default Layout";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:2300:"<!DOCTYPE html>
-<html lang="en">
+</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:2:{s:11:"description";s:14:"Default Layout";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:2173:"<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="{{ this.page.meta_description }}" />
-<meta name="keywords" content="{{ this.page.meta_keywords }}" />
-<meta name="author" content="{{ this.page.meta_author }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Élie & Josie Photographie</title>
 <!-- Google fonts -->
@@ -93,7 +89,7 @@
 <body>
 <div class="topbar animated fadeInLeftBig"></div>
 
-<div class="navbar-wrapper">
+<div  id="top"  class="navbar-wrapper">
 	{% partial "nav" %}
 </div>
 
@@ -122,7 +118,7 @@
 	{% partial "footer" %}
 </div>
 
-<a href="#works" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+<a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
 
 <!-- Scripts -->
 <script src="{{ 'assets/js/jquery.js'|theme }}"></script>

@@ -25,14 +25,14 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
 
     public function getDebugInfo()
     {
-        return array (  168 => 66,  161 => 65,  157 => 64,  153 => 63,  149 => 62,  145 => 61,  141 => 60,  137 => 59,  133 => 58,  126 => 53,  122 => 52,  117 => 49,  113 => 48,  108 => 45,  104 => 44,  98 => 40,  94 => 39,  89 => 36,  85 => 35,  80 => 32,  76 => 31,  71 => 28,  67 => 27,  58 => 21,  54 => 20,  48 => 16,  45 => 14,  42 => 13,  34 => 8,  30 => 7,  26 => 6,  19 => 1,);
+        return array (  160 => 64,  153 => 63,  149 => 62,  145 => 61,  141 => 60,  137 => 59,  133 => 58,  129 => 57,  125 => 56,  118 => 51,  114 => 50,  109 => 47,  105 => 46,  100 => 43,  96 => 42,  90 => 38,  86 => 37,  81 => 34,  77 => 33,  72 => 30,  68 => 29,  63 => 26,  59 => 25,  50 => 19,  46 => 18,  40 => 14,  37 => 12,  34 => 11,  26 => 6,  19 => 1,);
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
         echo "<!DOCTYPE html>
-<html lang=\"en\">
+<html>
 <head>
 <meta charset=\"UTF-8\" />
 <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
@@ -40,146 +40,138 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
         // line 6
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "page", array()), "meta_description", array()), "html", null, true);
         echo "\" />
-<meta name=\"keywords\" content=\"";
-        // line 7
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "page", array()), "meta_keywords", array()), "html", null, true);
-        echo "\" />
-<meta name=\"author\" content=\"";
-        // line 8
-        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "page", array()), "meta_author", array()), "html", null, true);
-        echo "\" />
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">
 <title>Élie & Josie Photographie</title>
 <!-- Google fonts -->
 <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
 ";
-        // line 13
+        // line 11
         echo $this->env->getExtension('CMS')->assetsFunction('css');
         echo $this->env->getExtension('CMS')->displayBlock('styles');
-        // line 14
+        // line 12
         echo "<link href=\"";
         echo $this->env->getExtension('CMS')->themeFilter(array(0 => "assets/vendor/gallery/blueimp-gallery.min.css", 1 => "assets/css/theme.css"));
-        // line 16
+        // line 14
         echo "\" rel=\"stylesheet\">
 <!-- font awesome -->
 <link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
 <!-- favicon -->
 <link rel=\"shortcut icon\" href=\"";
-        // line 20
+        // line 18
         echo $this->env->getExtension('CMS')->themeFilter("assets/images/favicon.ico");
         echo "\" type=\"image/x-icon\">
 <link rel=\"icon\" href=\"";
-        // line 21
+        // line 19
         echo $this->env->getExtension('CMS')->themeFilter("assets/images/favicon.ico");
         echo "\" type=\"image/x-icon\">
 </head>
 <body>
 <div class=\"topbar animated fadeInLeftBig\"></div>
 
-<div class=\"navbar-wrapper\">
+<div  id=\"top\"  class=\"navbar-wrapper\">
 \t";
-        // line 27
+        // line 25
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("nav"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 28
+        // line 26
         echo "</div>
 
 <div id=\"portfolio\" class=\" clearfix grid\">
 \t";
-        // line 31
+        // line 29
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("works"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 32
+        // line 30
         echo "</div>
 
 <div id=\"about\" class=\"container spacer about\">
 \t";
-        // line 35
+        // line 33
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("intro"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 36
+        // line 34
         echo "</div>
 
 <div id=\"team\" class=\"container spacer about\">
 \t";
-        // line 39
+        // line 37
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("team"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 40
+        // line 38
         echo "</div>
 
 <section>
 <div id=\"partners\" class=\"container spacer \">
 \t";
-        // line 44
+        // line 42
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("clients"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 45
+        // line 43
         echo "</div>
 </section>
 <div id=\"contact\" class=\"spacer\">
 \t";
-        // line 48
+        // line 46
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("contacts"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 49
+        // line 47
         echo "</div>
 
 <div class=\"footer text-center spacer\">
 \t";
-        // line 52
+        // line 50
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('CMS')->partialFunction("footer"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
-        // line 53
+        // line 51
         echo "</div>
 
-<a href=\"#works\" class=\"gototop \"><i class=\"fa fa-angle-up  fa-3x\"></i></a>
+<a href=\"#top\" class=\"gototop \"><i class=\"fa fa-angle-up  fa-3x\"></i></a>
 
 <!-- Scripts -->
 <script src=\"";
-        // line 58
+        // line 56
         echo $this->env->getExtension('CMS')->themeFilter("assets/js/jquery.js");
         echo "\"></script>
 <script src=\"";
-        // line 59
+        // line 57
         echo $this->env->getExtension('CMS')->themeFilter("assets/js/respond.js");
         echo "\"></script>
 <script src=\"";
-        // line 60
+        // line 58
         echo $this->env->getExtension('CMS')->themeFilter("assets/js/script.js");
         echo "\"></script>
 <script src=\"";
-        // line 61
+        // line 59
         echo $this->env->getExtension('CMS')->themeFilter("assets/js/touchSwipe.min.js");
         echo "\"></script>
 <script src=\"";
-        // line 62
+        // line 60
         echo $this->env->getExtension('CMS')->themeFilter("assets/js/wow.min.js");
         echo "\"></script>
 <script src=\"";
-        // line 63
+        // line 61
         echo $this->env->getExtension('CMS')->themeFilter("assets/vendor/bootstrap/js/bootstrap.min.js");
         echo "\"></script>
 <script src=\"";
-        // line 64
+        // line 62
         echo $this->env->getExtension('CMS')->themeFilter("assets/vendor/gallery/jquery.blueimp-gallery.min.js");
         echo "\"></script>
 ";
-        // line 65
+        // line 63
         echo '<script src="'. Request::getBasePath()
                 .'/modules/system/assets/js/framework.js"></script>'.PHP_EOL;
         echo '<script src="'. Request::getBasePath()
                     .'/modules/system/assets/js/framework.extras.js"></script>'.PHP_EOL;
         echo '<link href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras.css" rel="stylesheet">'.PHP_EOL;
-        // line 66
+        // line 64
         echo $this->env->getExtension('CMS')->assetsFunction('js');
         echo $this->env->getExtension('CMS')->displayBlock('scripts');
         echo "
@@ -189,13 +181,11 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
     }
 }
 /* <!DOCTYPE html>*/
-/* <html lang="en">*/
+/* <html>*/
 /* <head>*/
 /* <meta charset="UTF-8" />*/
 /* <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />*/
 /* <meta name="description" content="{{ this.page.meta_description }}" />*/
-/* <meta name="keywords" content="{{ this.page.meta_keywords }}" />*/
-/* <meta name="author" content="{{ this.page.meta_author }}" />*/
 /* <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">*/
 /* <title>Élie & Josie Photographie</title>*/
 /* <!-- Google fonts -->*/
@@ -213,7 +203,7 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
 /* <body>*/
 /* <div class="topbar animated fadeInLeftBig"></div>*/
 /* */
-/* <div class="navbar-wrapper">*/
+/* <div  id="top"  class="navbar-wrapper">*/
 /* 	{% partial "nav" %}*/
 /* </div>*/
 /* */
@@ -242,7 +232,7 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
 /* 	{% partial "footer" %}*/
 /* </div>*/
 /* */
-/* <a href="#works" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>*/
+/* <a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>*/
 /* */
 /* <!-- Scripts -->*/
 /* <script src="{{ 'assets/js/jquery.js'|theme }}"></script>*/

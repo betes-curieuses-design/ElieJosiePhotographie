@@ -1,14 +1,12 @@
-name: Cyrus Studio v2
-code: Cyrus Studio v2
-description: The Bootstrap Themes' free one page portfolio theme, converted for OctoberCMS
-author: Amit Bajracharya &amp; József Tamás Herczeg
-authorUrl: 'http://thebootstrapthemes.com/'
-
-# [...]
-
+name: ejp161003
+description: 'Modified version of Cyrus Studio v2 for Élie & Josie Photographie'
+author: 'Bêtes Curieuses Design'
+homepage: 'http://betescurieuses.com'
+code: ejp161003
+authorUrl: 'http://betescurieuses.com'
 form:
     fields:
         site_name:
-            label: Site name
-            comment: The website name as it should appear on the front-end
-            default: Cyrus Studio
+            label: 'Site name'
+            comment: 'The website name as it should appear on the front-end'
+            default: 'Cyrus Studio'

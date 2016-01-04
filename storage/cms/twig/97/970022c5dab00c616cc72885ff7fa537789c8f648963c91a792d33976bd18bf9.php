@@ -28,7 +28,7 @@ class __TwigTemplate_22335725a2a2c0b3e84285e232e37c12b44cb65242084767a96710a6780
         // line 1
         echo "<!--Contact Starts-->
 <div class=\"container contactform center\">
-<h2 class=\"text-center  wowload fadeInUp\">Nous contacter</h2>
+<h2 class=\"text-center  wowload fadeInUp text-primary\">Nous contacter</h2>
   <div class=\"row wowload fadeInLeftBig\">
       <div class=\"col-sm-6 col-sm-offset-3 col-xs-12\">
 \t\t  <p><strong>Courriel:</strong> <a href=\"mailto:info@eliejosiephotographie.com\">info@eliejosiephotographie.com</a></p>
@@ -53,7 +53,7 @@ class __TwigTemplate_22335725a2a2c0b3e84285e232e37c12b44cb65242084767a96710a6780
 }
 /* <!--Contact Starts-->*/
 /* <div class="container contactform center">*/
-/* <h2 class="text-center  wowload fadeInUp">Nous contacter</h2>*/
+/* <h2 class="text-center  wowload fadeInUp text-primary">Nous contacter</h2>*/
 /*   <div class="row wowload fadeInLeftBig">      */
 /*       <div class="col-sm-6 col-sm-offset-3 col-xs-12">*/
 /* 		  <p><strong>Courriel:</strong> <a href="mailto:info@eliejosiephotographie.com">info@eliejosiephotographie.com</a></p>*/
