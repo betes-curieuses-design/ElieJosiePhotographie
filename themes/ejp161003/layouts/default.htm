@@ -1,4 +1,8 @@
 description = "Default Layout"
+
+[contactForm ejpContact]
+injectBootstrapAssets = 0
+injectMainScript = 0
 ==
 <html>
 <head>
@@ -30,7 +34,16 @@ description = "Default Layout"
 <!-- Content -->
 {% page %}
 
+<div id="contact" class="spacer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                {% component 'ejpContact' %}
+            </div>
+        </div>
+    </div>
 
+</div>
 <!-- Footer -->
 
 <div class="footer text-center spacer">
@@ -38,7 +51,7 @@ description = "Default Layout"
 </div>
 
 <a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
-
+<div id="fb-root"></div>
 <!-- Scripts -->
 <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
 <script src="{{ 'assets/js/respond.js'|theme }}"></script>
@@ -63,6 +76,14 @@ description = "Default Layout"
     ga('create', 'UA-70359045-4', 'auto');
     ga('send', 'pageview');
 
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 </script>
 {% framework extras %}
 {% scripts %}

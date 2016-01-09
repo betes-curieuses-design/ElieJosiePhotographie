@@ -1,0 +1,20 @@
+{% set categories = __SELF__.categories %}
+{% set currentCategorySlug = __SELF__.currentCategorySlug %}
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <i class="fa fa-folder"></i>&nbsp; Catégories
+    </div>
+    <!-- List group -->
+    <ul class="list-group">
+        {% for category in categories %}
+            {% set postCount = category.post_count %}
+            <li class="list-group-item {% if category.slug == currentCategorySlug %}active{% endif %}">
+                <a href="{{ category.url }}">{{ category.name }}</a>
+                {% if postCount %}
+                    <span class="badge">{{ postCount }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
