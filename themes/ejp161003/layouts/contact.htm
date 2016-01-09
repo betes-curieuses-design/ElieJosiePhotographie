@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="{{ this.page.meta_description }}" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="{{ this.page.meta_description }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="google-site-verification" content="uHktIKoGLd5YM6vEZ8p_9CWzFQmk8et3fgot4eF4ofc" />
+    <meta name="google-site-verification" content="uHktIKoGLd5YM6vEZ8p_9CWzFQmk8et3fgot4eF4ofc"/>
     <title>Élie & Josie Photographie: {{ this.page.title }}</title>
     <!-- Google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
     {% styles %}
     <link href="{{ [
-			'assets/vendor/gallery/blueimp-gallery.min.css',
-			'assets/css/theme.css']|theme }}" rel="stylesheet">
+    'assets/vendor/gallery/blueimp-gallery.min.css',
+    'assets/css/theme.css']|theme }}" rel="stylesheet">
     <!-- font awesome -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- favicon -->
@@ -49,10 +49,17 @@
 <script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
 <script src="{{ 'assets/vendor/gallery/jquery.blueimp-gallery.min.js'|theme }}"></script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-70359045-4', 'auto');
     ga('send', 'pageview');

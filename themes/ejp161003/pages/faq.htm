@@ -1,18 +1,31 @@
 title = "FAQ"
 url = "/faq"
-layout = "contact"
+layout = "default"
 is_hidden = 0
 
 [faqDisplayer]
 faqGroup = 1
 injectBootstrapAssets = 1
 ==
-<div class="col-sm-12">
-<h1 class="text-center wowload fadeInUp text-primary">Faq</h1>
-    <div class="col-sm-1 hidden-xs"></div>
-    <div class="col-lg-10 col-sm-10 col-xs-12">
-        {% component 'faqDisplayer' %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px">
+            <h1 class="text-center wowload fadeInUp text-primary">Faq</h1>
+            <div class="col-sm-1 hidden-xs"></div>
+            <div class="col-lg-10 col-sm-10 col-xs-12">
+                {% component 'faqDisplayer' %}
+            </div>
+            <div class="col-sm-1 hidden-xs"></div>
+            <br><br><br>
+        </div>
     </div>
-    <div class="col-sm-1 hidden-xs"></div>
-    <br><br><br>
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 80px">
+            <br>
+        </div>
+    </div>
+</div>
+
+<div id="contact" class="spacer">
+    {% partial "contacts" %}
 </div>

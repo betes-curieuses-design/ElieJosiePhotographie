@@ -2,4 +2,25 @@ title = "Élie & Josie Photographie"
 url = "/"
 layout = "default"
 description = "Home Page"
+is_hidden = 0
 ==
+<div id="portfolio" class=" clearfix grid">
+	{% partial "works" %}
+</div>
+
+<div id="about" class="container spacer about">
+	{% partial "intro" %}
+</div>
+
+<div id="team" class="container spacer about">
+	{% partial "team" %}
+</div>
+
+<section>
+<div id="partners" class="container spacer ">
+	{% partial "clients" %}
+</div>
+</section>
+<div id="contact" class="spacer">
+	{% partial "contacts" %}
+</div>
