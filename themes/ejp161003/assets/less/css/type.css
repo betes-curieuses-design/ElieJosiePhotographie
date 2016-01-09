@@ -1,0 +1,130 @@
+/*
+* Buttons
+*/
+h1 {
+  margin: 0;
+  line-height: 1em;
+  font: 5em 'euphoria_scriptregular';
+  margin: 0.25em 0;
+}
+h2 {
+  margin: 0;
+  line-height: 1em;
+  font: 3.5em 'euphoria_scriptregular';
+  margin-bottom: 1em;
+}
+h3 {
+  margin: 0;
+  line-height: 1em;
+  font: 2em 'euphoria_scriptregular';
+  margin: 2em 0 1em 0;
+}
+h4 {
+  margin: 0;
+  line-height: 1em;
+  font: 1.5em 'quicksand';
+  margin-bottom: 0.5em;
+}
+h4 i {
+  margin-right: 0.5em;
+}
+h5 {
+  margin: 0;
+  line-height: 1em;
+  font: 1.5em 'quicksand';
+  margin-bottom: 1em;
+}
+h5 i {
+  margin-right: 0.5em;
+}
+h6 {
+  margin: 0;
+  line-height: 1em;
+  font: 1.25em 'quicksand';
+  margin-bottom: 1em;
+}
+h6 i {
+  margin-right: 0.5em;
+}
+p {
+  font: 500 15px/15px 'Quicksand', sans-serif;
+  font-size: 1em;
+  line-height: 1.7em;
+  margin-bottom: 1.7em;
+}
+small,
+.small {
+  font-size: 83%;
+  line-height: 2.067;
+}
+.text-muted {
+  color: #999999;
+}
+.page-header {
+  padding-bottom: 9.5px;
+  margin: 42px 0 21px;
+  border-bottom: 1px solid #e6e6e6;
+}
+ul,
+ol {
+  margin-bottom: 10.5px;
+}
+dl {
+  margin-bottom: 21px;
+}
+dt,
+dd {
+  line-height: 1.42857143;
+}
+@media (min-width: 768px) {
+  .dl-horizontal dt {
+    width: 160px;
+  }
+  .dl-horizontal dd {
+    margin-left: 180px;
+  }
+}
+abbr[title],
+abbr[data-original-title] {
+  border-bottom: 1px dotted #999999;
+}
+blockquote {
+  border-left: 3px solid #e6e6e6;
+  padding: 0 0 0 16px;
+  margin: 0 0 21px;
+}
+blockquote p {
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: normal;
+  margin-bottom: .4em;
+}
+blockquote small,
+blockquote .small {
+  font-size: 15px;
+  line-height: 1.42857143;
+  font-style: italic;
+  color: #999999;
+}
+blockquote small:before,
+blockquote .small:before {
+  content: "";
+}
+blockquote.pull-right {
+  padding-right: 16px;
+  padding-left: 0;
+  border-right: 3px solid #e6e6e6;
+  border-left: 0;
+}
+blockquote.pull-right small:after {
+  content: "";
+}
+address {
+  margin-bottom: 21px;
+  line-height: 1.42857143;
+}
+@media (max-width: 360px) {
+  h1 {
+    font: 4em 'euphoria_scriptregular' !important;
+  }
+}

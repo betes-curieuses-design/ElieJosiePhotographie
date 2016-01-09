@@ -1,0 +1,119 @@
+1451934056s:4324:"a:6:{s:5:"mtime";i:1451933405;s:7:"content";s:2084:"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{{ this.page.meta_description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Élie & Josie Photographie: {{ this.page.title }}</title>
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    {% styles %}
+    <link href="{{ [
+			'assets/vendor/gallery/blueimp-gallery.min.css',
+			'assets/css/theme.css']|theme }}" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+</head>
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<div  id="top"  class="navbar-wrapper">
+    {% partial "nav" %}
+</div>
+
+<div class="generalblock container">
+    {% page %}
+</div>
+
+<section>
+    <div id="partners" class="container spacer ">
+        {% partial "clients" %}
+    </div>
+</section>
+
+<div id="contact" class="spacer">
+    {% partial "contacts" %}
+</div>
+
+<div class="footer text-center spacer">
+    {% partial "footer" %}
+</div>
+
+<a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+<!-- Scripts -->
+<script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/js/respond.js'|theme }}"></script>
+<script src="{{ 'assets/js/script.js'|theme }}"></script>
+<script src="{{ 'assets/js/touchSwipe.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/gallery/jquery.blueimp-gallery.min.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:2084:"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{{ this.page.meta_description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Élie & Josie Photographie: {{ this.page.title }}</title>
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    {% styles %}
+    <link href="{{ [
+			'assets/vendor/gallery/blueimp-gallery.min.css',
+			'assets/css/theme.css']|theme }}" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+</head>
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<div  id="top"  class="navbar-wrapper">
+    {% partial "nav" %}
+</div>
+
+<div class="generalblock container">
+    {% page %}
+</div>
+
+<section>
+    <div id="partners" class="container spacer ">
+        {% partial "clients" %}
+    </div>
+</section>
+
+<div id="contact" class="spacer">
+    {% partial "contacts" %}
+</div>
+
+<div class="footer text-center spacer">
+    {% partial "footer" %}
+</div>
+
+<a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+<!-- Scripts -->
+<script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/js/respond.js'|theme }}"></script>
+<script src="{{ 'assets/js/script.js'|theme }}"></script>
+<script src="{{ 'assets/js/touchSwipe.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/gallery/jquery.blueimp-gallery.min.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";}";

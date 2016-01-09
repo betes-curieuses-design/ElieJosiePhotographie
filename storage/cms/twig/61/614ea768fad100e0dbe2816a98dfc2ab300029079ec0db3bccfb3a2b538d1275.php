@@ -34,7 +34,7 @@ class __TwigTemplate_82e0c57e601469044d26ca140091d4a579df325e071015f70f82e5e7fe9
         echo "<!-- Footer Starts -->
 <p class=\"wowload flipInX\">
     <a href=\"https://www.facebook.com/Élie-Josie-photographie-448359348562018\"><i class=\"fa fa-facebook-square fa-2x text-primary\"></i></a>
-    <a href=\"#\"><i class=\"fa fa-linkedin-square fa-2x text-primary\"></i></a>
+    <a href=\"https://www.linkedin.com/in/josée-broekaert-34b96b54\"><i class=\"fa fa-linkedin-square fa-2x text-primary\"></i></a>
     <a href=\"https://www.pinterest.com/liejosiephotogr/\"><i class=\"fa fa-pinterest-square fa-2x text-primary\"></i></a>
     <a href=\"https://plus.google.com/106047593105793158276/\"><i class=\"fa fa-google-plus-square fa-2x text-primary\"></i></a>
 </p>
@@ -48,7 +48,7 @@ class __TwigTemplate_82e0c57e601469044d26ca140091d4a579df325e071015f70f82e5e7fe9
 /* <!-- Footer Starts -->*/
 /* <p class="wowload flipInX">*/
 /*     <a href="https://www.facebook.com/Élie-Josie-photographie-448359348562018"><i class="fa fa-facebook-square fa-2x text-primary"></i></a>*/
-/*     <a href="#"><i class="fa fa-linkedin-square fa-2x text-primary"></i></a>*/
+/*     <a href="https://www.linkedin.com/in/josée-broekaert-34b96b54"><i class="fa fa-linkedin-square fa-2x text-primary"></i></a>*/
 /*     <a href="https://www.pinterest.com/liejosiephotogr/"><i class="fa fa-pinterest-square fa-2x text-primary"></i></a>*/
 /*     <a href="https://plus.google.com/106047593105793158276/"><i class="fa fa-google-plus-square fa-2x text-primary"></i></a>*/
 /* </p>*/

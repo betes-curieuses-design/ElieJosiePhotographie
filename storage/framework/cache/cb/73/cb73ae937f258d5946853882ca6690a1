@@ -1,0 +1,129 @@
+1452131017s:5170:"a:6:{s:5:"mtime";i:1451934574;s:7:"content";s:2507:"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{{ this.page.meta_description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="uHktIKoGLd5YM6vEZ8p_9CWzFQmk8et3fgot4eF4ofc" />
+    <title>Élie & Josie Photographie: {{ this.page.title }}</title>
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    {% styles %}
+    <link href="{{ [
+			'assets/vendor/gallery/blueimp-gallery.min.css',
+			'assets/css/theme.css']|theme }}" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+</head>
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<div id="top" class="navbar-wrapper">
+    {% partial "nav" %}
+</div>
+
+<div class="generalblock container">
+    {% page %}
+</div>
+
+<div id="contact" class="spacer">
+    {% partial "contacts" %}
+</div>
+
+<div class="footer text-center spacer">
+    {% partial "footer" %}
+</div>
+
+<a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+<!-- Scripts -->
+<script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/js/respond.js'|theme }}"></script>
+<script src="{{ 'assets/js/script.js'|theme }}"></script>
+<script src="{{ 'assets/js/touchSwipe.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/gallery/jquery.blueimp-gallery.min.js'|theme }}"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-70359045-4', 'auto');
+    ga('send', 'pageview');
+
+</script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:2507:"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{{ this.page.meta_description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="uHktIKoGLd5YM6vEZ8p_9CWzFQmk8et3fgot4eF4ofc" />
+    <title>Élie & Josie Photographie: {{ this.page.title }}</title>
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    {% styles %}
+    <link href="{{ [
+			'assets/vendor/gallery/blueimp-gallery.min.css',
+			'assets/css/theme.css']|theme }}" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon">
+</head>
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<div id="top" class="navbar-wrapper">
+    {% partial "nav" %}
+</div>
+
+<div class="generalblock container">
+    {% page %}
+</div>
+
+<div id="contact" class="spacer">
+    {% partial "contacts" %}
+</div>
+
+<div class="footer text-center spacer">
+    {% partial "footer" %}
+</div>
+
+<a href="#top" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+<!-- Scripts -->
+<script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+<script src="{{ 'assets/js/respond.js'|theme }}"></script>
+<script src="{{ 'assets/js/script.js'|theme }}"></script>
+<script src="{{ 'assets/js/touchSwipe.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/wow.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/bootstrap/js/bootstrap.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/gallery/jquery.blueimp-gallery.min.js'|theme }}"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-70359045-4', 'auto');
+    ga('send', 'pageview');
+
+</script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";}";
