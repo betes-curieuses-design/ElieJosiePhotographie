@@ -1,0 +1,70 @@
+title = "Catégorie du blogue"
+url = "/blog/category/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts ejpBlogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/article"
+
+[blogCategories ejpBlogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+$this->page->title = $this->category->name;
+}
+?>
+==
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            {% if not category %}
+                <h2>Category not found</h2>
+            {% else %}
+                <h1 class="text-center wowload fadeInUp text-primary">{{ category.name }}</h1>
+                <div class="row">
+                    <div class="col-sm-8">
+                        {% component 'ejpBlogPosts' %}
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {% component 'ejpBlogCategories' %}
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {#Plugin Facebook#}
+                                <div class="fb-page"
+                                     data-href="https://www.facebook.com/&#xc9;lie-Josie-photographie-448359348562018"
+                                     data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                                     data-hide-cover="false" data-show-facepile="true"></div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+        </div>
+    </div>
+
+</div>

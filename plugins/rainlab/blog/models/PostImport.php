@@ -101,6 +101,20 @@ class PostImport extends ImportModel
         }
     }
 
+    protected function findAuthorFromEmail($data)
+    {
+        if (!$email = array_get($data, 'email', $this->default_author)) {
+            return null;
+        }
+
+        if (isset($this->authorEmailCache[$email])) {
+            return $this->authorEmailCache[$email];
+        }
+
+        $author = AuthorModel::where('email', $email)->first();
+        return $this->authorEmailCache[$email] = $author;
+    }
+
     protected function findDuplicatePost($data)
     {
         if ($id = array_get($data, 'id')) {
@@ -115,20 +129,6 @@ class PostImport extends ImportModel
         }
 
         return $post->first();
-    }
-
-    protected function findAuthorFromEmail($data)
-    {
-        if (!$email = array_get($data, 'email', $this->default_author)) {
-            return null;
-        }
-
-        if (isset($this->authorEmailCache[$email])) {
-            return $this->authorEmailCache[$email];
-        }
-
-        $author = AuthorModel::where('email', $email)->first();
-        return $this->authorEmailCache[$email] = $author;
     }
 
     protected function getCategoryIdsForPost($data)

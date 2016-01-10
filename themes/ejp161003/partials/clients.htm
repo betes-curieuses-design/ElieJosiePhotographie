@@ -1,29 +1,16 @@
+[Testimonials]
+
+[Quotes]
+==
 <h2 class="text-center  wowload fadeInUp">Témoignages</h2>
-  <div class="clearfix">
+<div class="row">
     <div class="col-sm-6 partners  wowload fadeInLeft">
-         <img src="{{ 'assets/images/vertquivive_logo-smll.jpg'|theme }}" class="img-responsive center-block" alt="Vert de vie">
-         <!--<img src="{{ 'assets/images/partners/2.jpg'|theme }}" alt="partners">-->
+        <img src="{{ 'assets/images/vertquivive_logo-smll.jpg'|theme }}" class="img-responsive center-block"
+             alt="Vert de vie">
+        <!--<img src="{{ 'assets/images/partners/2.jpg'|theme }}" alt="partners">-->
     </div>
     <div class="col-sm-6">
-
-
-    <div id="carousel-testimonials" class="carousel slide testimonails  wowload fadeInRight" data-ride="carousel">
-    <div class="carousel-inner">  
-      <div class="item active animated bounceInRight row">
-      <div  class="col-xs-10">
-      <p> I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system. </p>
-      <span>Angel Smith - <b>eshop Canada</b></span>
-      </div>
-      </div>
-
-	<!-- Indicators -->
-   	<ol class="carousel-indicators">
-		<li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
-		<li data-target="#carousel-testimonials" data-slide-to="1"></li>
-	</ol>
-	<!-- Indicators -->
-	</div>
-
-	</div>
-</div>
+        {% component 'Testimonials' %}
+        {% component 'Quotes' %}
+    </div>
 </div>

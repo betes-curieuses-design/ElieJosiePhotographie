@@ -155,6 +155,34 @@ class Posts extends ComponentBase
         $this->categoryPage = $this->page['categoryPage'] = $this->property('categoryPage');
     }
 
+    protected function listPosts()
+    {
+        $category = $this->category ? $this->category->id : null;
+
+        /*
+         * List all the posts, eager load their categories
+         */
+        $posts = BlogPost::with('categories')->listFrontEnd([
+            'page'       => $this->property('pageNumber'),
+            'sort'       => $this->property('sortOrder'),
+            'perPage'    => $this->property('postsPerPage'),
+            'category'   => $category
+        ]);
+
+        /*
+         * Add a "url" helper attribute for linking to each post and category
+         */
+        $posts->each(function($post) {
+            $post->setUrl($this->postPage, $this->controller);
+
+            $post->categories->each(function($category) {
+                $category->setUrl($this->categoryPage, $this->controller);
+            });
+        });
+
+        return $posts;
+    }
+
     protected function loadCategory()
     {
         if (!$categoryId = $this->property('categoryFilter'))
@@ -164,33 +192,5 @@ class Posts extends ComponentBase
             return null;
 
         return $category;
-    }
-
-    protected function listPosts()
-    {
-        $categories = $this->category ? $this->category->id : null;
-
-        /*
-         * List all the posts, eager load their categories
-         */
-        $posts = BlogPost::with('categories')->listFrontEnd([
-            'page'       => $this->property('pageNumber'),
-            'sort'       => $this->property('sortOrder'),
-            'perPage'    => $this->property('postsPerPage'),
-            'categories' => $categories
-        ]);
-
-        /*
-         * Add a "url" helper attribute for linking to each post and category
-         */
-        $posts->each(function($post){
-            $post->setUrl($this->postPage, $this->controller);
-
-            $post->categories->each(function($category){
-                $category->setUrl($this->categoryPage, $this->controller);
-            });
-        });
-
-        return $posts;
     }
 }

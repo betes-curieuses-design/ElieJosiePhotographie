@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: Titre
+        searchable: true
+    description:
+        label: Description
+        searchable: true
+    author:
+        label: Auteur
+        searchable: true

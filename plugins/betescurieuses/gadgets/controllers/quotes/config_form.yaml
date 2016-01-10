@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Quote
+
+# Model Form Field configuration
+form: $/betescurieuses/gadgets/models/quote/fields.yaml
+
+# Model Class name
+modelClass: BetesCurieuses\Gadgets\Models\Quote
+
+# Default redirect location
+defaultRedirect: betescurieuses/gadgets/quotes
+
+# Create page
+create:
+    title: Create Quote
+    redirect: betescurieuses/gadgets/quotes/update/:id
+    redirectClose: betescurieuses/gadgets/quotes
+
+# Update page
+update:
+    title: Edit Quote
+    redirect: betescurieuses/gadgets/quotes
+    redirectClose: betescurieuses/gadgets/quotes
+
+# Preview page
+preview:
+    title: Preview Quote

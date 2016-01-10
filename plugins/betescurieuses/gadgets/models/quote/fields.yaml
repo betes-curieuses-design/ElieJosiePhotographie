@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Titre
+        span: left
+    author:
+        label: Auteur
+        span: right
+
+    description:
+        label: description
+        type: textarea
+
+    published:
+        label: Publié
+        type: switch

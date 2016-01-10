@@ -30,6 +30,23 @@ class BlogMarkdown extends MarkdownEditor
         parent::init();
     }
 
+    protected function loadAssets()
+    {
+        $this->assetPath = '/modules/backend/formwidgets/markdowneditor/assets';
+        parent::loadAssets();
+    }
+
+    public function onRefresh()
+    {
+        $content = post($this->formField->getName());
+
+        $previewHtml = PostModel::formatHtml($content, true);
+
+        return [
+            'preview' => $previewHtml
+        ];
+    }
+
     protected function checkUploadPostback()
     {
         if (!post('X_BLOG_IMAGE_UPLOAD'))
@@ -90,22 +107,5 @@ class BlogMarkdown extends MarkdownEditor
 
             die();
         }
-    }
-
-    public function onRefresh()
-    {
-        $content = post($this->formField->getName());
-
-        $previewHtml = PostModel::formatHtml($content, true);
-
-        return [
-            'preview' => $previewHtml
-        ];
-    }
-
-    protected function loadAssets()
-    {
-        $this->assetPath = '/modules/backend/formwidgets/markdowneditor/assets';
-        parent::loadAssets();
     }
 }

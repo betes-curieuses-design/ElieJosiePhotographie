@@ -11,6 +11,7 @@ use Cms\Classes\Theme;
 class Category extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\NestedTree;
 
     public $table = 'rainlab_blog_categories';
 
@@ -22,10 +23,48 @@ class Category extends Model
         'slug' => 'required|between:3,64|unique:rainlab_blog_categories',
         'code' => 'unique:rainlab_blog_categories',
     ];
-    public $belongsToMany = [
-        'posts' => ['RainLab\Blog\Models\Post', 'table' => 'rainlab_blog_posts_categories', 'order' => 'published_at desc', 'scope' => 'isPublished']
-    ];
+
     protected $guarded = [];
+
+    public $belongsToMany = [
+        'posts' => ['RainLab\Blog\Models\Post',
+            'table' => 'rainlab_blog_posts_categories',
+            'order' => 'published_at desc',
+            'scope' => 'isPublished'
+        ]
+    ];
+
+    public function beforeValidate()
+    {
+        // Generate a URL slug for this model
+        if (!$this->exists && !$this->slug)
+            $this->slug = Str::slug($this->name);
+    }
+
+    public function afterDelete()
+    {
+        $this->posts()->detach();
+    }
+
+    public function getPostCountAttribute()
+    {
+        return $this->posts()->count();
+    }
+
+    /**
+     * Sets the "url" attribute with a URL to this object
+     * @param string $pageName
+     * @param Cms\Classes\Controller $controller
+     */
+    public function setUrl($pageName, $controller)
+    {
+        $params = [
+            'id' => $this->id,
+            'slug' => $this->slug,
+        ];
+
+        return $this->url = $controller->pageUrl($pageName, $params);
+    }
 
     /**
      * Handler for the pages.menuitem.getTypeInfo event.
@@ -39,7 +78,7 @@ class Category extends Model
      *   false if omitted.
      * - dynamicItems - Boolean value indicating whether the item type could generate new menu items.
      *   Optional, false if omitted.
-     * - cmsPages - a list of CMS pages (objects of the Cms\Classes\Page class), if the item type requires a CMS page reference to
+     * - cmsPages - a list of CMS pages (objects of the Cms\Classes\Page class), if the item type requires a CMS page reference to 
      *   resolve the item URL.
      * @param string $type Specifies the menu item type
      * @return array Returns an array
@@ -49,17 +88,10 @@ class Category extends Model
         $result = [];
 
         if ($type == 'blog-category') {
-
-            $references = [];
-            $categories = self::orderBy('name')->get();
-            foreach ($categories as $category) {
-                $references[$category->id] = $category->name;
-            }
-
             $result = [
-                'references'   => $references,
-                'nesting'      => false,
-                'dynamicItems' => false
+                'references'   => self::listSubCategoryOptions(),
+                'nesting'      => true,
+                'dynamicItems' => true
             ];
         }
 
@@ -75,16 +107,18 @@ class Category extends Model
             $pages = CmsPage::listInTheme($theme, true);
             $cmsPages = [];
             foreach ($pages as $page) {
-                if (!$page->hasComponent('blogPosts'))
+                if (!$page->hasComponent('blogPosts')) {
                     continue;
+                }
 
                 /*
                  * Component must use a category filter with a routing parameter
                  * eg: categoryFilter = "{{ :somevalue }}"
                  */
                 $properties = $page->getComponentProperties('blogPosts');
-                if (!isset($properties['categoryFilter']) || !preg_match('/{{\s*:/', $properties['categoryFilter']))
+                if (!isset($properties['categoryFilter']) || !preg_match('/{{\s*:/', $properties['categoryFilter'])) {
                     continue;
+                }
 
                 $cmsPages[] = $page;
             }
@@ -95,6 +129,31 @@ class Category extends Model
         return $result;
     }
 
+    protected static function listSubCategoryOptions()
+    {
+        $category = self::make()->getAllRoot();
+
+        $iterator = function($categories) use (&$iterator) {
+            $result = [];
+
+            foreach ($categories as $category) {
+                if (!$category->children) {
+                    $result[$category->id] = $category->name;
+                }
+                else {
+                    $result[$category->id] = [
+                        'title' => $category->name,
+                        'items' => $iterator($category->children)
+                    ];
+                }
+            }
+
+            return $result;
+        };
+
+        return $iterator($category);
+    }
+
     /**
      * Handler for the pages.menuitem.resolveItem event.
      * Returns information about a menu item. The result is an array
@@ -102,9 +161,9 @@ class Category extends Model
      * - url - the menu item URL. Not required for menu item types that return all available records.
      *   The URL should be returned relative to the website root and include the subdirectory, if any.
      *   Use the URL::to() helper to generate the URLs.
-     * - isActive - determines whether the menu item is active. Not required for menu item types that
+     * - isActive - determines whether the menu item is active. Not required for menu item types that 
      *   return all available records.
-     * - items - an array of arrays with the same keys (url, isActive, items) + the title key.
+     * - items - an array of arrays with the same keys (url, isActive, items) + the title key. 
      *   The items array should be added only if the $item's $nesting property value is TRUE.
      * @param \RainLab\Pages\Classes\MenuItem $item Specifies the menu item.
      * @param \Cms\Classes\Theme $theme Specifies the current theme.
@@ -134,6 +193,32 @@ class Category extends Model
             $result['url'] = $pageUrl;
             $result['isActive'] = $pageUrl == $url;
             $result['mtime'] = $category->updated_at;
+
+            if ($item->nesting) {
+                $categories = $category->getAllRoot();
+                $iterator = function($categories) use (&$iterator, &$item, &$theme, $url) {
+                    $branch = [];
+
+                    foreach ($categories as $category) {
+
+                        $branchItem = [];
+                        $branchItem['url'] = self::getCategoryPageUrl($item->cmsPage, $category, $theme);
+                        $branchItem['isActive'] = $branchItem['url'] == $url;
+                        $branchItem['title'] = $category->name;
+                        $branchItem['mtime'] = $category->updated_at;
+
+                        if ($category->children) {
+                            $branchItem['items'] = $iterator($category->children);
+                        }
+
+                        $branch[] = $branchItem;
+                    }
+
+                    return $branch;
+                };
+
+                $result['items'] = $iterator($categories);
+            }
         }
         elseif ($item->type == 'all-blog-categories') {
             $result = [
@@ -182,37 +267,5 @@ class Category extends Model
         $url = CmsPage::url($page->getBaseFileName(), [$paramName => $category->slug]);
 
         return $url;
-    }
-
-    public function beforeValidate()
-    {
-        // Generate a URL slug for this model
-        if (!$this->exists && !$this->slug)
-            $this->slug = Str::slug($this->name);
-    }
-
-    public function afterDelete()
-    {
-        $this->posts()->detach();
-    }
-
-    public function getPostCountAttribute()
-    {
-        return $this->posts()->count();
-    }
-
-    /**
-     * Sets the "url" attribute with a URL to this object
-     * @param string $pageName
-     * @param Cms\Classes\Controller $controller
-     */
-    public function setUrl($pageName, $controller)
-    {
-        $params = [
-            'id' => $this->id,
-            'slug' => $this->slug,
-        ];
-
-        return $this->url = $controller->pageUrl($pageName, $params);
     }
 }

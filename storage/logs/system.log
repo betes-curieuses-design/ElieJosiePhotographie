@@ -995,3 +995,29 @@ Stack trace:
 #51 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(84): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #52 C:\wamp\www\betes\ElieJosiePhotographie\index.php(44): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #53 {main}  
+[2016-01-10 16:44:46] production.ERROR: exception 'InvalidArgumentException' with message 'Plugin "BetesCurieuses.Gadgets" not found.' in C:\wamp\www\betes\ElieJosiePhotographie\modules\system\console\PluginRefresh.php:42
+Stack trace:
+#0 [internal function]: System\Console\PluginRefresh->fire()
+#1 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Container\Container.php(919): call_user_func_array(Array, Array)
+#2 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Console\Command.php(384): Illuminate\Container\Container->call(Array)
+#3 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(208): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Console\Command.php(121): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Application.php(700): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Application.php(357): Symfony\Component\Console\Application->doRunCommand(Object(System\Console\PluginRefresh), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Application.php(228): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(105): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\wamp\www\betes\ElieJosiePhotographie\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 {main}  
+[2016-01-10 16:44:57] production.ERROR: exception 'InvalidArgumentException' with message 'Plugin "Betescurieuses.Gadgets" not found.' in C:\wamp\www\betes\ElieJosiePhotographie\modules\system\console\PluginRefresh.php:42
+Stack trace:
+#0 [internal function]: System\Console\PluginRefresh->fire()
+#1 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Container\Container.php(919): call_user_func_array(Array, Array)
+#2 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Console\Command.php(384): Illuminate\Container\Container->call(Array)
+#3 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(208): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Console\Command.php(121): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Application.php(700): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Application.php(357): Symfony\Component\Console\Application->doRunCommand(Object(System\Console\PluginRefresh), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\wamp\www\betes\ElieJosiePhotographie\vendor\symfony\console\Symfony\Component\Console\Application.php(228): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\wamp\www\betes\ElieJosiePhotographie\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(105): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\wamp\www\betes\ElieJosiePhotographie\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 {main}  

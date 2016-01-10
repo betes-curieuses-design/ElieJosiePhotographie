@@ -1,0 +1,35 @@
+title = "Portfolio -  Portrait"
+url = "/portfolio/portrait"
+layout = "default"
+is_hidden = 0
+
+[gallery ejpGallery]
+idGallery = 4
+lang = "Gallery"
+jqueryinject = "yes"
+thumbnail = "true"
+caption = "true"
+desc = "true"
+counter = "true"
+controls = "true"
+preload = 1
+mode = "slide"
+speed = 500
+loop = "true"
+auto = "false"
+pause = 2000
+escKey = "true"
+height = 150
+width = 200
+resizer = "auto"
+==
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            <h1 class="text-center wowload fadeInUp text-primary">Porfolio</h1>
+            <h2 class="text-center">Portrait</h2>
+            {% component 'ejpGallery' %}
+        </div>
+    </div>
+
+</div>
