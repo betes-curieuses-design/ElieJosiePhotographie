@@ -6,12 +6,21 @@ injectMainScript = 0
 ==
 <html>
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="{{ this.page.meta_description }}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="language" content="fr">
     <meta name="google-site-verification" content="uHktIKoGLd5YM6vEZ8p_9CWzFQmk8et3fgot4eF4ofc"/>
-    <title>Élie & Josie Photographie</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Élie & Josie Photographie | {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}"/>
+    <meta name="robots" content="index,follow">
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:image" content="{{ this.getShareImageUrl }}" />    To FIX like AE-->
+    <meta property="og:title" content="Élie & Josie Photographie | {{ this.page.title }}" />
+    <meta property="og:url" content="{{ this.page.url }}" />
+    <meta property="og:site_name" content="Élie & Josie Photographie" />
+    <meta property="og:description" content="{{ this.page.settings.meta_description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <!-- Google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
     {% styles %}
