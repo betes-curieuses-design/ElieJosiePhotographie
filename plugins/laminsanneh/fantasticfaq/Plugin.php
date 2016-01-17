@@ -43,7 +43,7 @@ class Plugin extends PluginBase
     {
         return [
             'fantasticfaq' => [
-                'label'       => 'Faq Groups',
+                'label'       => 'FAQ',
                 'url'         => Backend::url('laminsanneh/fantasticfaq/faqgroups'),
                 'icon'        => 'icon-bullhorn',
                 'permissions' => ['laminsanneh.fantasticfaq.*'],

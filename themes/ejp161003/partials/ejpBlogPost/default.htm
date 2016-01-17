@@ -6,13 +6,13 @@
 <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
 <div class="row">
-    <div class="col-xs-6 col-sm-3">
+    <div class="col-sm-3 col-xs-6 little-top-buffer">
         <i class="fa fa-calendar"></i> {{ post.published_at|date('d-m-Y') }}
     </div>
-    <div class="col-xs-6 col-sm-4">
+    <div class="col-sm-4 col-xs-6 little-top-buffer">
         <i class="fa fa-user"></i> {{ post.user.first_name }}
     </div>
-    <div class="col-sm-5">
+    <div class="col-sm-5 col-xs-12 little-top-buffer">
         <i class="fa fa-folder"></i>
         {% for category in post.categories %}
             <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
@@ -20,20 +20,20 @@
     </div>
 </div>
 <div class="row little-top-buffer">
-    <div class="col-xs-6 col-sm-3">
+    <div class="col-sm-4">
         <div class="fb-like" data-href="{{ post.url }}" data-layout="button_count"
              data-action="like" data-show-faces="true" data-share="true"></div>
     </div>
-    <div class="col-xs-6 col-sm-3">
+    <div class="col-sm-2">
         <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
         <script type="IN/Share" data-counter="right"></script>
     </div>
-    <div class="col-xs-4 col-sm-3 mobile-top-buffer">
+    <div class="col-sm-2">
         <a href="https://www.pinterest.com/pin/create/button/">
             <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
         </a>
     </div>
-    <div class="col-xs-8 col-sm-3 mobile-top-buffer">
+    <div class="col-sm-4">
         <div class="g-plus" data-action="share"></div>
     </div>
 </div>

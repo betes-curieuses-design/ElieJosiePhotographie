@@ -12,6 +12,15 @@ slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "blog/blogs"
 ==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the post title
+    if ($this->post)
+$this->page->title = $this->post->title;
+}
+?>
+==
 <div class="container">
     <div class="row">
         <div class="col-sm-12" style="margin-top: 150px;">

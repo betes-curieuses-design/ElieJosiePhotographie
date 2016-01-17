@@ -37,11 +37,11 @@ class Plugin extends PluginBase
     {
         return [
             'gallery' => [
-                'label' => 'raviraj.rjgallery::lang.menu.name',
+                'label' => 'Portfolio',
                 'url'   => Backend::url('raviraj/rjgallery/galleries'),
-                'icon'        => 'icon-picture-o',
+                'icon'        => 'icon-briefcase',
                 'permissions' => ['raviraj.rjgallery.*'],
-                'order'       => 500,
+                'order'       => 300,
             ],
         ];
     }
