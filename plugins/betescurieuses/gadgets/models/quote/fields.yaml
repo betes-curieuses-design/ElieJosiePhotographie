@@ -17,3 +17,9 @@ fields:
     published:
         label: Publié
         type: switch
+    image:
+        label: Image
+        type: fileupload
+        mode: image
+        imageWidth: 100
+        imageHeight: 100

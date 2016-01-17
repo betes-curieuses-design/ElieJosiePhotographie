@@ -33,7 +33,16 @@ class Quote extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'image' => ['System\Models\File']
+    ];
     public $attachMany = [];
 
+    public function scopeIsPublished($query)
+    {
+        return $query
+            ->whereNotNull('published')
+            ->where('published', true)
+            ;
+    }
 }

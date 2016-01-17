@@ -21,7 +21,7 @@ class Testimonials extends ComponentBase
 
     public function onRun()
     {
-        $this->page['sliders'] = Quote::orderByRaw("RAND()")->take(5)->get();
+        $this->page['sliders'] = Quote::orderByRaw("RAND()")->isPublished()->take(5)->get();
     }
 
 }

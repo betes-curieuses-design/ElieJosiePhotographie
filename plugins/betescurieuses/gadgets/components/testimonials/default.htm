@@ -14,20 +14,24 @@
                 {% if slider.description %}
                     <img src="{{ 'assets/images/testimonials.png'|theme }}" alt="">
                     <div class="carousel-caption">
-                        {{ slider.description|raw }}
+                        <div class="row">
+                            {% if slider.image.count %}
+                            <div class="col-sm-4">
+                                <img class="img-responsive round-image"
+                                     data-src="{{ slider.image.filename }}"
+                                     src="{{ slider.image.thumb(140,140) }}"
+                                     alt="{{ slider.image.description }}"/>
+                            </div>
+                            {% endif %}
+                            <div class="col-sm-{{ slider.image.count? '8':'12' }} text-left">
+                                <h6 style="color: #333;">{{ slider.description|raw }}</h6>
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
             </div>
         {% endfor %}
     </div>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="fa fa-chevron-left icon-prev" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="fa fa-chevron-right icon-next" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+
 </div>
