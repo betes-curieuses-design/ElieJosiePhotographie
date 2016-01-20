@@ -8804,25 +8804,21 @@ button.close {
   }
 }
 h1 {
-  margin: 0;
   line-height: 1em;
   font: 5em 'euphoria_scriptregular';
   margin: 0.25em 0;
 }
 h2 {
-  margin: 0;
   line-height: 1em;
   font: 3.5em 'euphoria_scriptregular';
-  margin-bottom: 1em;
+  margin: 0.25em 0;
 }
 h3 {
-  margin: 0;
   line-height: 1em;
   font: 2em 'euphoria_scriptregular';
-  margin: 2em 0 1em 0;
+  margin: 1.5em 0 0.5em 0;
 }
 h4 {
-  margin: 0;
   line-height: 1em;
   font: 1.5em 'quicksand';
   margin-bottom: 0.5em;
@@ -8831,19 +8827,17 @@ h4 i {
   margin-right: 0.5em;
 }
 h5 {
-  margin: 0;
   line-height: 1em;
   font: 1.5em 'quicksand';
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 h5 i {
   margin-right: 0.5em;
 }
 h6 {
-  margin: 0;
   line-height: 1em;
   font: 1.25em 'quicksand';
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 h6 i {
   margin-right: 0.5em;
@@ -9025,11 +9019,9 @@ a:hover {
   padding-top: 6em;
 }
 .carousel-caption {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
+  left: 5%;
+  right: 5%;
+  margin-bottom: 5px;
 }
 .caption-wrapper {
   display: table;
@@ -9054,6 +9046,12 @@ a:hover {
 }
 .carousel-control {
   z-index: 1000;
+}
+.carousel-control.left {
+  background: none;
+}
+.carousel-control.right {
+  background: none;
 }
 #about {
   padding-bottom: 50px;
@@ -9306,6 +9304,10 @@ section {
     margin-top: 2em;
     padding-bottom: 2em;
   }
+}
+.round-image {
+  border-radius: 999px;
+  border: 1px solid #ccc;
 }
 /*---------------*/
 /***** HACK *****/
@@ -13338,8 +13340,8 @@ fieldset[disabled] .btn-secondary.active {
   border-radius: 0;
 }
 .panel-sidebar .panel-heading {
-  border-radius: 0
-    color: #fff!important;
+  border-radius: 0;
+  color: #fff!important;
 }
 .panel-sidebar .panel-heading h3 {
   font-weight: bold;
