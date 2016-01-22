@@ -1,0 +1,146 @@
+1453430469s:4899:"a:6:{s:5:"mtime";i:1453340247;s:7:"content";s:2373:"{% put styles %}
+    <style>
+        #{{ __SELF__ }} {
+            list-style: none outside none;
+            display: inline-block;
+            padding-left: 0;
+        }
+        #{{ __SELF__ }} li {
+            display: block;
+            float: left;
+            height: {{ height }}px;
+            margin-bottom: 6px;
+            margin-right: 6px;
+            width: {{ width }}px;
+        }
+        #{{ __SELF__ }} li a {
+            height: {{ height }}px;
+            width: {{ width }}px;
+        }
+        #{{ __SELF__ }} li a img {
+            height: {{ height }}px;
+            width: {{ width }}px;
+        }
+    </style>
+{% endput %}
+{% put scripts %}
+    <script>
+         $(document).ready(function() {
+            var {{ __SELF__ }} = $("#{{ __SELF__ }}").lightGallery({
+                // Elements
+                thumbnail   : {{ thumbnail }},
+                caption     : {{ caption }},
+                desc        : {{ desc }},
+                counter     : {{ counter }},
+                controls    : {{ controls }}, 
+                preload     : {{ preload }},
+
+                // Transitions
+                mode   : '{{ mode }}',
+                useCSS : true,
+                easing : 'linear',
+                speed  : {{ speed }},
+
+                // Navigation
+                hideControlOnEnd : false,
+                loop             : {{ loop }},
+                auto             : {{ auto }},
+                pause            : {{ pause }},
+                escKey           : {{ escKey }},
+                swipeThreshold    : 50,
+
+                lang : { allPhotos: '{{ lang }}' },
+            });
+        });
+    </script>
+{% endput %}
+
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-lg-11 col-lg-offset-1">
+        <div class="text-center">
+            <div style="margin: 0 auto;">
+                <ul id="{{ __SELF__ }}" class="{{ __SELF__ }}">
+                    {% for image in gallery.images %}
+                        <li data-src="{{ image.path }}" data-title="{{ image.title }}" data-desc="{{ image.description }}">
+                            <a href="#"><img src="{{ image.getThumb(width, height, resizer) }}" alt="{{ image.title }}" /></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:2370:"{% put styles %}
+    <style>
+        #{{ __SELF__ }} {
+            list-style: none outside none;
+            display: inline-block;
+            padding-left: 0;
+        }
+        #{{ __SELF__ }} li {
+            display: block;
+            float: left;
+            height: {{ height }}px;
+            margin-bottom: 6px;
+            margin-right: 6px;
+            width: {{ width }}px;
+        }
+        #{{ __SELF__ }} li a {
+            height: {{ height }}px;
+            width: {{ width }}px;
+        }
+        #{{ __SELF__ }} li a img {
+            height: {{ height }}px;
+            width: {{ width }}px;
+        }
+    </style>
+{% endput %}
+{% put scripts %}
+    <script>
+         $(document).ready(function() {
+            var {{ __SELF__ }} = $("#{{ __SELF__ }}").lightGallery({
+                // Elements
+                thumbnail   : {{ thumbnail }},
+                caption     : {{ caption }},
+                desc        : {{ desc }},
+                counter     : {{ counter }},
+                controls    : {{ controls }}, 
+                preload     : {{ preload }},
+
+                // Transitions
+                mode   : '{{ mode }}',
+                useCSS : true,
+                easing : 'linear',
+                speed  : {{ speed }},
+
+                // Navigation
+                hideControlOnEnd : false,
+                loop             : {{ loop }},
+                auto             : {{ auto }},
+                pause            : {{ pause }},
+                escKey           : {{ escKey }},
+                swipeThreshold    : 50,
+
+                lang : { allPhotos: '{{ lang }}' },
+            });
+        });
+    </script>
+{% endput %}
+
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-10 col-sm-offset-1 col-lg-11 col-lg-offset-1">
+        <div class="text-center">
+            <div style="margin: 0 auto;">
+                <ul id="{{ __SELF__ }}" class="{{ __SELF__ }}">
+                    {% for image in gallery.images %}
+                        <li data-src="{{ image.path }}" data-title="{{ image.title }}" data-desc="{{ image.description }}">
+                            <a href="#"><img src="{{ image.getThumb(width, height, resizer) }}" alt="{{ image.title }}" /></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>";}";

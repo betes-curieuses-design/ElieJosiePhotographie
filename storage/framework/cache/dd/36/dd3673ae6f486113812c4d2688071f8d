@@ -1,0 +1,69 @@
+1453431938s:3346:"a:6:{s:5:"mtime";i:1452736919;s:7:"content";s:1595:"<div class="confirm-container">
+    <!--This will contain the confirmation when the email is successfully sent-->
+</div>
+<h2 class="text-center  wowload fadeInUp text-primary">Nous contacter</h2>
+<p>
+    <strong>Courriel:</strong> <a href="mailto:info@eliejosiephotographie.com">info@eliejosiephotographie.com</a>
+</p>
+<p>
+    <strong>Téléphone:</strong><br>
+    <strong>Éliane:</strong> <a href="tel:5147935188">514.793.5188</a><br>
+    <strong>Josée:</strong> <a href="tel:5142460123"> 514.246.0123</a><p>
+
+<form class="flexiContactForm" role="form"
+      data-request="{{ __SELF__ }}::onMailSent"
+      data-request-update="'{{ __SELF__ }}::confirm': '.confirm-container'">
+
+    <div class="form-groups">
+        <div class="form-group">
+            <input type="text" class="form-control" value="" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" value="" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="form-group hidden">
+            <input type="text" class="form-control" value="Message venant de votre site Web" name="subject" placeholder="" required>>
+        </div>
+        <div class="form-group">
+            <textarea  style="resize: none;" class="form-control" value="" name="body" placeholder="Message" cols="30"
+                      rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm pull-right">
+            <i class="fa fa-paper-plane"></i>&nbsp; Soumettre
+        </button>
+    </div>
+</form>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:1595:"<div class="confirm-container">
+    <!--This will contain the confirmation when the email is successfully sent-->
+</div>
+<h2 class="text-center  wowload fadeInUp text-primary">Nous contacter</h2>
+<p>
+    <strong>Courriel:</strong> <a href="mailto:info@eliejosiephotographie.com">info@eliejosiephotographie.com</a>
+</p>
+<p>
+    <strong>Téléphone:</strong><br>
+    <strong>Éliane:</strong> <a href="tel:5147935188">514.793.5188</a><br>
+    <strong>Josée:</strong> <a href="tel:5142460123"> 514.246.0123</a><p>
+
+<form class="flexiContactForm" role="form"
+      data-request="{{ __SELF__ }}::onMailSent"
+      data-request-update="'{{ __SELF__ }}::confirm': '.confirm-container'">
+
+    <div class="form-groups">
+        <div class="form-group">
+            <input type="text" class="form-control" value="" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" value="" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="form-group hidden">
+            <input type="text" class="form-control" value="Message venant de votre site Web" name="subject" placeholder="" required>>
+        </div>
+        <div class="form-group">
+            <textarea  style="resize: none;" class="form-control" value="" name="body" placeholder="Message" cols="30"
+                      rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm pull-right">
+            <i class="fa fa-paper-plane"></i>&nbsp; Soumettre
+        </button>
+    </div>
+</form>";}";

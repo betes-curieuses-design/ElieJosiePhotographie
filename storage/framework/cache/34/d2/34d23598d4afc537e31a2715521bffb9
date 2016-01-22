@@ -1,0 +1,15 @@
+1452737386s:516:"a:6:{s:5:"mtime";i:1452452599;s:7:"content";s:181:"{% if errorHappened %}
+    {% partial __SELF__~'::flash-messages' %}
+{% else %}
+    <h2>Courriel envoyé avec succès</h2>
+    <p>
+        {{confirmation_text}}
+    </p>
+{% endif %}";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:181:"{% if errorHappened %}
+    {% partial __SELF__~'::flash-messages' %}
+{% else %}
+    <h2>Courriel envoyé avec succès</h2>
+    <p>
+        {{confirmation_text}}
+    </p>
+{% endif %}";}";

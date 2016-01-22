@@ -1,0 +1,40 @@
+1453430802s:1701:"a:6:{s:5:"mtime";i:1452452599;s:7:"content";s:774:"{% set categories = __SELF__.categories %}
+{% set currentCategorySlug = __SELF__.currentCategorySlug %}
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <i class="fa fa-folder"></i>&nbsp; Catégories
+    </div>
+    <!-- List group -->
+    <ul class="list-group">
+        {% for category in categories %}
+            {% set postCount = category.post_count %}
+            <li class="list-group-item {% if category.slug == currentCategorySlug %}active{% endif %}">
+                <a href="{{ category.url }}">{{ category.name }}</a>
+                {% if postCount %}
+                    <span class="badge">{{ postCount }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:773:"{% set categories = __SELF__.categories %}
+{% set currentCategorySlug = __SELF__.currentCategorySlug %}
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <i class="fa fa-folder"></i>&nbsp; Catégories
+    </div>
+    <!-- List group -->
+    <ul class="list-group">
+        {% for category in categories %}
+            {% set postCount = category.post_count %}
+            <li class="list-group-item {% if category.slug == currentCategorySlug %}active{% endif %}">
+                <a href="{{ category.url }}">{{ category.name }}</a>
+                {% if postCount %}
+                    <span class="badge">{{ postCount }}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>";}";

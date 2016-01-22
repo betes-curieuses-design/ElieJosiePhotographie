@@ -1,0 +1,116 @@
+1453431937s:4194:"a:6:{s:5:"mtime";i:1453338253;s:7:"content";s:1971:"title = "Blogue"
+url = "/blogue/article/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost ejpBlogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[blogCategories ejpBlogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/blogs"
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the post title
+    if ($this->post)
+$this->page->title = $this->post->title;
+}
+?>
+==
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            <h1 class="text-center wowload fadeInUp text-primary">Blogue</h1>
+            <div class="row">
+                <div class="col-sm-8">
+                    {% component 'ejpBlogPost' %}
+                    <div class="row all-top-buffer">
+                        <div class="col-sm-12">
+                            <div id="disqus_thread"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1 mobile-top-buffer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {% component 'ejpBlogCategories' %}
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {#Plugin Facebook#}
+                            <div class="fb-page"
+                                 data-href="https://www.facebook.com/&#xc9;lie-Josie-photographie-448359348562018"
+                                 data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                                 data-hide-cover="false" data-show-facepile="true"></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row all-top-buffer">
+        <div class="col-sm-12">
+
+        </div>
+    </div>
+
+</div>
+";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:6:"Blogue";s:3:"url";s:21:"/blogue/article/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:10:"components";a:2:{s:20:"blogPost ejpBlogPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:13:"blog/category";}s:32:"blogCategories ejpBlogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:10:"blog/blogs";}}}s:4:"code";s:139:"
+function onEnd()
+{
+    // Optional - set the page title to the post title
+    if ($this->post)
+$this->page->title = $this->post->title;
+}
+";s:6:"markup";s:1559:"<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            <h1 class="text-center wowload fadeInUp text-primary">Blogue</h1>
+            <div class="row">
+                <div class="col-sm-8">
+                    {% component 'ejpBlogPost' %}
+                    <div class="row all-top-buffer">
+                        <div class="col-sm-12">
+                            <div id="disqus_thread"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1 mobile-top-buffer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {% component 'ejpBlogCategories' %}
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {#Plugin Facebook#}
+                            <div class="fb-page"
+                                 data-href="https://www.facebook.com/&#xc9;lie-Josie-photographie-448359348562018"
+                                 data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                                 data-hide-cover="false" data-show-facepile="true"></div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row all-top-buffer">
+        <div class="col-sm-12">
+
+        </div>
+    </div>
+
+</div>";}";

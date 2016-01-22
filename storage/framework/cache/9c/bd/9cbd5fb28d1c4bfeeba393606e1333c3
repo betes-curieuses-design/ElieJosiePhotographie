@@ -1,0 +1,118 @@
+1453431937s:4677:"a:6:{s:5:"mtime";i:1452826425;s:7:"content";s:2197:"title = "Catégorie du blogue"
+url = "/blog/category/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts ejpBlogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/article"
+
+[blogCategories ejpBlogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+<?php
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+$this->page->title = $this->category->name;
+}
+?>
+==
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            {% if not category %}
+                <h2>Category not found</h2>
+            {% else %}
+                <h1 class="text-center wowload fadeInUp text-primary">{{ category.name }}</h1>
+                <div class="row">
+                    <div class="col-sm-8">
+                        {% component 'ejpBlogPosts' %}
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {% component 'ejpBlogCategories' %}
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {#Plugin Facebook#}
+                                <div class="fb-page"
+                                     data-href="https://www.facebook.com/&#xc9;lie-Josie-photographie-448359348562018"
+                                     data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                                     data-hide-cover="false" data-show-facepile="true"></div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+        </div>
+    </div>
+
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:20:"Catégorie du blogue";s:3:"url";s:27:"/blog/category/:slug/:page?";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:10:"components";a:2:{s:22:"blogPosts ejpBlogPosts";a:7:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:11:"{{ :slug }}";s:12:"postsPerPage";s:2:"10";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:12:"blog/article";}s:32:"blogCategories ejpBlogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:13:"blog/category";}}}s:4:"code";s:156:"
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+$this->page->title = $this->category->name;
+}
+";s:6:"markup";s:1576:"<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            {% if not category %}
+                <h2>Category not found</h2>
+            {% else %}
+                <h1 class="text-center wowload fadeInUp text-primary">{{ category.name }}</h1>
+                <div class="row">
+                    <div class="col-sm-8">
+                        {% component 'ejpBlogPosts' %}
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {% component 'ejpBlogCategories' %}
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {#Plugin Facebook#}
+                                <div class="fb-page"
+                                     data-href="https://www.facebook.com/&#xc9;lie-Josie-photographie-448359348562018"
+                                     data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                                     data-hide-cover="false" data-show-facepile="true"></div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+        </div>
+    </div>
+
+</div>";}";

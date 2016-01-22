@@ -1,0 +1,41 @@
+1453431937s:1651:"a:6:{s:5:"mtime";i:1452822670;s:7:"content";s:722:"title = "Accueil"
+url = "/"
+layout = "default"
+description = "Home Page"
+is_hidden = 0
+meta_title = "Élie & Josie Photographie"
+meta_description = "Élie & Josie, c'est deux photographes talentueuses voulant vous faire rentrer dans leur monde visuel. Laissez-vous porter par la magie du moment capté par la photographie grâce à Élie & Josie Photographie."
+==
+<div id="portfolio" class=" clearfix grid">
+	{% partial "works" %}
+</div>
+
+<div id="about" class="container spacer about">
+	{% partial "intro" %}
+</div>
+
+<div id="team" class="container spacer about">
+	{% partial "team" %}
+</div>
+
+<section>
+<div id="partners" class="container spacer about">
+	{% partial "clients" %}
+</div>
+</section>";s:7:"viewBag";a:0:{}s:8:"settings";a:8:{s:5:"title";s:7:"Accueil";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:11:"description";s:9:"Home Page";s:9:"is_hidden";s:1:"0";s:10:"meta_title";s:26:"Élie & Josie Photographie";s:16:"meta_description";s:210:"Élie & Josie, c'est deux photographes talentueuses voulant vous faire rentrer dans leur monde visuel. Laissez-vous porter par la magie du moment capté par la photographie grâce à Élie & Josie Photographie.";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:350:"<div id="portfolio" class=" clearfix grid">
+	{% partial "works" %}
+</div>
+
+<div id="about" class="container spacer about">
+	{% partial "intro" %}
+</div>
+
+<div id="team" class="container spacer about">
+	{% partial "team" %}
+</div>
+
+<section>
+<div id="partners" class="container spacer about">
+	{% partial "clients" %}
+</div>
+</section>";}";

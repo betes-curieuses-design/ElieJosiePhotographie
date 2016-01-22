@@ -1,0 +1,45 @@
+1453431937s:2088:"a:6:{s:5:"mtime";i:1453338253;s:7:"content";s:861:"title = "Portfolio: Famille & Maternité"
+url = "/portfolio/famille-maternite"
+layout = "default"
+description = "Portfolio de photos de famille et de maternité d'Élie & Josie Photographie. Contactez nous pour une séance!"
+is_hidden = 0
+
+[gallery ejpGallery]
+idGallery = 3
+lang = "Gallery"
+jqueryinject = "yes"
+thumbnail = "true"
+caption = "true"
+desc = "true"
+counter = "true"
+controls = "true"
+preload = 1
+mode = "slide"
+speed = 500
+loop = "true"
+auto = "false"
+pause = 2000
+escKey = "true"
+height = 145
+width = 190
+resizer = "auto"
+==
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            <h1 class="text-center wowload fadeInUp text-primary">Porfolio</h1>
+            <h2 class="text-center">Famille & Maternité</h2>
+            {% component 'ejpGallery' %}
+        </div>
+    </div>
+
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:6:{s:5:"title";s:31:"Portfolio: Famille & Maternité";s:3:"url";s:28:"/portfolio/famille-maternite";s:6:"layout";s:7:"default";s:11:"description";s:110:"Portfolio de photos de famille et de maternité d'Élie & Josie Photographie. Contactez nous pour une séance!";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:18:"gallery ejpGallery";a:18:{s:9:"idGallery";s:1:"3";s:4:"lang";s:7:"Gallery";s:12:"jqueryinject";s:3:"yes";s:9:"thumbnail";s:4:"true";s:7:"caption";s:4:"true";s:4:"desc";s:4:"true";s:7:"counter";s:4:"true";s:8:"controls";s:4:"true";s:7:"preload";s:1:"1";s:4:"mode";s:5:"slide";s:5:"speed";s:3:"500";s:4:"loop";s:4:"true";s:4:"auto";s:5:"false";s:5:"pause";s:4:"2000";s:6:"escKey";s:4:"true";s:6:"height";s:3:"145";s:5:"width";s:3:"190";s:7:"resizer";s:4:"auto";}}}s:4:"code";N;s:6:"markup";s:321:"<div class="container">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top: 150px;">
+            <h1 class="text-center wowload fadeInUp text-primary">Porfolio</h1>
+            <h2 class="text-center">Famille & Maternité</h2>
+            {% component 'ejpGallery' %}
+        </div>
+    </div>
+
+</div>";}";
