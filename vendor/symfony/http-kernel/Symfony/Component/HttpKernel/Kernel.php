@@ -45,11 +45,11 @@ use Symfony\Component\ClassLoader\ClassCollectionLoader;
  */
 abstract class Kernel implements KernelInterface, TerminableInterface
 {
-    const VERSION = '2.6.12';
-    const VERSION_ID = '20612';
+    const VERSION = '2.6.13';
+    const VERSION_ID = '20613';
     const MAJOR_VERSION = '2';
     const MINOR_VERSION = '6';
-    const RELEASE_VERSION = '12';
+    const RELEASE_VERSION = '13';
     const EXTRA_VERSION = '';
     /**
      * @var BundleInterface[]

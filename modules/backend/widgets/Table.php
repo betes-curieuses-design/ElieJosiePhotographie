@@ -189,6 +189,23 @@ class Table extends WidgetBase
      * Event handlers
      */
 
+    public function onGetAutocompleteOptions()
+    {
+        $columnName = Input::get('column');
+        $rowData = Input::get('rowData');
+
+        $eventResults = $this->fireEvent('table.getAutocompleteOptions', [$columnName, $rowData]);
+
+        $options = [];
+        if (count($eventResults)) {
+            $options = $eventResults[0];
+        }
+
+        return [
+            'options' => $options
+        ];
+    }
+
     /**
      * {@inheritDoc}
      */

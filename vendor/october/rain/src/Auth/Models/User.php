@@ -49,6 +49,12 @@ class User extends Model
      */
     protected $table = 'users';
     /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['activated_at', 'last_login'];
+    /**
      * @var array The attributes that should be hidden for arrays.
      */
     protected $hidden = ['password', 'reset_password_code', 'activation_code', 'persist_code'];
@@ -633,14 +639,5 @@ class User extends Model
     public function getRememberTokenName()
     {
         return 'persist_code';
-    }
-
-    /**
-     * Get the attributes that should be converted to dates.
-     * @return array
-     */
-    public function getDates()
-    {
-        return array_merge(parent::getDates(), ['activated_at', 'last_login']);
     }
 }

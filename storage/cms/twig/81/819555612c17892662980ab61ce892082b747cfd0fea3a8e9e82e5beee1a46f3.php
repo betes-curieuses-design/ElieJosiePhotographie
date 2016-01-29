@@ -37,10 +37,10 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
     <meta name=\"language\" content=\"fr\">
     <meta name=\"google-site-verification\" content=\"uHktIKoGLd5YM6vEZ8p_9CWzFQmk8et3fgot4eF4ofc\"/>
     <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
-    <title>Élie & Josie Photographie | ";
+    <title>";
         // line 7
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "page", array()), "title", array()), "html", null, true);
-        echo "</title>
+        echo " | Élie & Josie Photographie</title>
     <meta name=\"description\" content=\"";
         // line 8
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "page", array()), "meta_description", array()), "html", null, true);
@@ -51,10 +51,10 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
         // line 11
         echo twig_escape_filter($this->env, (isset($context["image_url"]) ? $context["image_url"] : null), "html", null, true);
         echo "\" />
-    <meta property=\"og:title\" content=\"Élie & Josie Photographie | ";
+    <meta property=\"og:title\" content=\"";
         // line 12
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "page", array()), "title", array()), "html", null, true);
-        echo "\" />
+        echo " | Élie & Josie Photographie\" />
     <meta property=\"og:url\" content=\"";
         // line 13
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["this"]) ? $context["this"] : null), "page", array()), "url", array()), "html", null, true);
@@ -211,12 +211,12 @@ class __TwigTemplate_9395553f489fca7ad25d630f367405a5cc4663ec22cd4b7f09f1251cf99
 /*     <meta name="language" content="fr">*/
 /*     <meta name="google-site-verification" content="uHktIKoGLd5YM6vEZ8p_9CWzFQmk8et3fgot4eF4ofc"/>*/
 /*     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>*/
-/*     <title>Élie & Josie Photographie | {{ this.page.title }}</title>*/
+/*     <title>{{ this.page.title }} | Élie & Josie Photographie</title>*/
 /*     <meta name="description" content="{{ this.page.meta_description }}"/>*/
 /*     <meta name="robots" content="index,follow">*/
 /*     <meta property="og:type" content="website" />*/
 /*     <meta property="og:image" content="{{ image_url }}" />*/
-/*     <meta property="og:title" content="Élie & Josie Photographie | {{ this.page.title }}" />*/
+/*     <meta property="og:title" content="{{ this.page.title }} | Élie & Josie Photographie" />*/
 /*     <meta property="og:url" content="{{ this.page.url }}" />*/
 /*     <meta property="og:site_name" content="Élie & Josie Photographie" />*/
 /*     <meta property="og:description" content="{{ this.page.settings.meta_description }}" />*/

@@ -29,7 +29,7 @@ namespace Doctrine\Common\Cache;
  * @author Roman Borschel <roman@code-factory.org>
  * @author Fabio B. Silva <fabio.bat.silva@gmail.com>
  */
-abstract class CacheProvider implements Cache, FlushableCache, ClearableCache, MultiGetCache
+abstract class CacheProvider implements Cache, FlushableCache, ClearableCache, MultiGetCache, MultiPutCache
 {
     const DOCTRINE_NAMESPACE_CACHEKEY = 'DoctrineNamespaceCacheKey[%s]';
 
@@ -184,17 +184,36 @@ abstract class CacheProvider implements Cache, FlushableCache, ClearableCache, M
     /**
      * {@inheritdoc}
      */
-    public function contains($id)
+    public function saveMultiple(array $keysAndValues, $lifetime = 0)
     {
-        return $this->doContains($this->getNamespacedId($id));
+        $namespacedKeysAndValues = array();
+        foreach ($keysAndValues as $key => $value) {
+            $namespacedKeysAndValues[$this->getNamespacedId($key)] = $value;
+        }
+
+        return $this->doSaveMultiple($namespacedKeysAndValues, $lifetime);
     }
 
     /**
-     * {@inheritdoc}
+     * Default implementation of doSaveMultiple. Each driver that supports multi-put should override it.
+     *
+     * @param array $keysAndValues  Array of keys and values to save in cache
+     * @param int   $lifetime       The lifetime. If != 0, sets a specific lifetime for these
+     *                              cache entries (0 => infinite lifeTime).
+     *
+     * @return bool TRUE if the operation was successful, FALSE if it wasn't.
      */
-    public function save($id, $data, $lifeTime = 0)
+    protected function doSaveMultiple(array $keysAndValues, $lifetime = 0)
     {
-        return $this->doSave($this->getNamespacedId($id), $data, $lifeTime);
+        $success = true;
+
+        foreach ($keysAndValues as $key => $value) {
+            if (!$this->doSave($key, $value, $lifetime)) {
+                $success = false;
+            }
+        }
+
+        return $success;
     }
 
     /**
@@ -208,6 +227,22 @@ abstract class CacheProvider implements Cache, FlushableCache, ClearableCache, M
      * @return bool TRUE if the entry was successfully stored in the cache, FALSE otherwise.
      */
     abstract protected function doSave($id, $data, $lifeTime = 0);
+
+    /**
+     * {@inheritdoc}
+     */
+    public function contains($id)
+    {
+        return $this->doContains($this->getNamespacedId($id));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save($id, $data, $lifeTime = 0)
+    {
+        return $this->doSave($this->getNamespacedId($id), $data, $lifeTime);
+    }
 
     /**
      * {@inheritdoc}

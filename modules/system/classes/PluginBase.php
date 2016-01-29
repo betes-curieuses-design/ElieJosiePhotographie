@@ -4,6 +4,7 @@ use Illuminate\Support\ServiceProvider as ServiceProviderBase;
 use ReflectionClass;
 use SystemException;
 use Yaml;
+use Backend;
 
 /**
  * Plugin base class
@@ -130,7 +131,20 @@ class PluginBase extends ServiceProviderBase
      */
     public function registerNavigation()
     {
-        return [];
+        $configuration = $this->getConfigurationFromYaml();
+        if (array_key_exists('navigation', $configuration)) {
+            $navigation = $configuration['navigation'];
+
+            if (is_array($navigation)) {
+                array_walk_recursive($navigation, function(&$item, $key){
+                    if ($key == 'url') {
+                        $item = Backend::url($item);
+                    }
+                });
+            }
+
+            return $navigation;
+        }
     }
 
     /**
@@ -140,7 +154,10 @@ class PluginBase extends ServiceProviderBase
      */
     public function registerPermissions()
     {
-        return [];
+        $configuration = $this->getConfigurationFromYaml();
+        if (array_key_exists('permissions', $configuration)) {
+            return $configuration['permissions'];
+        }
     }
 
     /**

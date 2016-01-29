@@ -1,4 +1,4 @@
-1453431937s:4194:"a:6:{s:5:"mtime";i:1453338253;s:7:"content";s:1971:"title = "Blogue"
+1453946384s:4194:"a:6:{s:5:"mtime";i:1453338253;s:7:"content";s:1971:"title = "Blogue"
 url = "/blogue/article/:slug"
 layout = "default"
 is_hidden = 0

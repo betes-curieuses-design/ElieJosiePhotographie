@@ -226,6 +226,7 @@ class Controller
             MaintenanceSettings::get('is_enabled', false) &&
             !BackendAuth::getUser()
         ) {
+            $this->setStatusCode(503);
             $page = Page::loadCached($this->theme, MaintenanceSettings::get('cms_page'));
         }
 
@@ -290,7 +291,7 @@ class Controller
     /**
      * Sets the status code for the current web response.
      * @param int $code Status code
-     * @return \Cms\Classes\Controller $this
+     * @return self
      */
     public function setStatusCode($code)
     {
@@ -528,7 +529,6 @@ class Controller
      * The property values should be defined as {{ param }}.
      * @param ComponentBase $component The component object.
      * @param array $parameters Specifies the partial parameters.
-     * @return Returns updated properties.
      */
     protected function setComponentPropertiesFromParams($component, $parameters = [])
     {
@@ -671,6 +671,7 @@ class Controller
     /**
      * Tries to find and run an AJAX handler in the page, layout, components and plugins.
      * The method stops as soon as the handler is found.
+     * @param string $handler name of the ajax handler
      * @return boolean Returns true if the handler was found. Returns false otherwise.
      */
     protected function runAjaxHandler($handler)
@@ -718,6 +719,7 @@ class Controller
 
     /**
      * Searches the layout and page components by an alias
+     * @param $name
      * @return ComponentBase The component object, if found
      */
     public function findComponentByName($name)
@@ -740,6 +742,7 @@ class Controller
 
     /**
      * Searches the layout and page components by an AJAX handler
+     * @param string $handler
      * @return ComponentBase The component object, if found
      */
     public function findComponentByHandler($handler)
@@ -766,7 +769,7 @@ class Controller
     /**
      * Renders a requested partial.
      * The framework uses this method internally.
-     * @param string $partial The view to load.
+     * @param string $name The view to load.
      * @param array $parameters Parameter variables to pass to the view.
      * @param bool $throwException Throw an exception if the partial is not found.
      * @return mixed Partial contents or false if not throwing an exception.
@@ -934,6 +937,7 @@ class Controller
 
     /**
      * Searches the layout and page components by a partial file
+     * @param string $partial
      * @return ComponentBase The component object, if found
      */
     public function findComponentByPartial($partial)
@@ -1128,6 +1132,8 @@ class Controller
 
     /**
      * Renders a component's default content.
+     * @param $name
+     * @param array $parameters
      * @return string Returns the component default contents.
      */
     public function renderComponent($name, $parameters = [])
@@ -1158,7 +1164,7 @@ class Controller
 
     /**
      * Returns the Twig loader.
-     * @return Cms\Twig\Loader
+     * @return \Cms\Twig\Loader
      */
     public function getLoader()
     {
@@ -1245,6 +1251,9 @@ class Controller
 
     /**
      * Looks up the current page URL with supplied parameters and route persistence.
+     * @param array $parameters
+     * @param bool $routePersistence
+     * @return null|string
      */
     public function currentPageUrl($parameters = [], $routePersistence = true)
     {
@@ -1300,8 +1309,8 @@ class Controller
 
     /**
      * Returns a routing parameter.
-     * @param string Routing parameter name.
-     * @param string Default to use if none is found.
+     * @param string $name Routing parameter name.
+     * @param string $default Default to use if none is found.
      * @return string
      */
     public function param($name, $default = null)

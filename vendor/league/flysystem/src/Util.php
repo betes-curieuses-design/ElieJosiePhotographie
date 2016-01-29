@@ -20,7 +20,7 @@ class Util
         $result = [];
 
         foreach ($map as $from => $to) {
-            if (! isset($object[$from])) {
+            if ( ! isset($object[$from])) {
                 continue;
             }
 
@@ -116,7 +116,7 @@ class Util
     {
         $mimeType = MimeType::detectByContent($content);
 
-        if (empty($mimeType) || $mimeType === 'text/plain') {
+        if (empty($mimeType) || in_array($mimeType, ['text/plain', 'application/x-empty'])) {
             $extension = pathinfo($path, PATHINFO_EXTENSION);
 
             if ($extension) {
@@ -177,7 +177,7 @@ class Util
 
         $parent = $object['dirname'];
 
-        while (! empty($parent) && ! in_array($parent, $directories)) {
+        while ( ! empty($parent) && ! in_array($parent, $directories)) {
             $directories[] = $parent;
             $parent = static::dirname($parent);
         }
@@ -229,9 +229,7 @@ class Util
     public static function pathinfo($path)
     {
         $pathinfo = pathinfo($path) + compact('path');
-        $pathinfo['dirname'] = array_key_exists('dirname', $pathinfo)
-            ? static::normalizeDirname($pathinfo['dirname'])
-            : '';
+        $pathinfo['dirname'] = static::normalizeDirname($pathinfo['dirname']);
 
         return $pathinfo;
     }

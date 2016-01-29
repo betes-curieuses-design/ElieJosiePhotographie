@@ -203,7 +203,7 @@ class ClassLoader
      */
     public function register()
     {
-        spl_autoload_register(array($this, 'loadClass'));
+        spl_autoload_register([$this, 'loadClass']);
     }
 
     /**
@@ -213,7 +213,7 @@ class ClassLoader
      */
     public function unregister()
     {
-        spl_autoload_unregister(array($this, 'loadClass'));
+        spl_autoload_unregister([$this, 'loadClass']);
     }
 
     /**
@@ -252,7 +252,7 @@ class ClassLoader
     {
         return class_exists($type, $autoload)
             || interface_exists($type, $autoload)
-            || (function_exists('trait_exists') && trait_exists($type, $autoload));
+            || trait_exists($type, $autoload);
     }
 
     /**

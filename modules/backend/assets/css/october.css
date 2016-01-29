@@ -1124,6 +1124,46 @@
 .control-filelist.hero ul li:hover > div.controls {
   display: block;
 }
+.control-filelist.hero ul li.separator {
+  position: relative;
+  border-bottom: 1px solid #95a5a6;
+  padding: 17px 15px 18px 15px;
+}
+.control-filelist.hero ul li.separator:before {
+  z-index: 31;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 9.5px solid transparent;
+  border-right: 9.5px solid transparent;
+  border-top: 11px solid white;
+  border-bottom-width: 0;
+  position: absolute;
+  left: 13px;
+  bottom: -8px;
+}
+.control-filelist.hero ul li.separator:after {
+  z-index: 30;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8.5px solid transparent;
+  border-right: 8.5px solid transparent;
+  border-top: 9px solid #95a5a6;
+  border-bottom-width: 0;
+  position: absolute;
+  left: 14px;
+  bottom: -9px;
+}
+.control-filelist.hero ul li.separator h5 {
+  color: #2b3e50;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+  padding: 0;
+}
 .control-filelist.hero ul > li.group > ul > li > a {
   padding-left: 66px;
 }
@@ -2969,6 +3009,13 @@ body {
 .whiteboard {
   background: white;
 }
+.layout-fill-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .layout-cell.width-fix > form,
 [data-calculate-width] > form,
 .layout-cell.width-fix > div,
@@ -3003,6 +3050,114 @@ body.slim-container .layout .layout-container {
   .layout.responsive-sidebar > .layout-cell:last-child .layout-absolute {
     position: static;
   }
+}
+.flex-layout-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.flex-layout-column.full-height-strict {
+  height: 100%;
+}
+.flex-layout-column.absolute {
+  position: absolute!important;
+}
+.flex-layout-column.fill-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.flex-layout-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.flex-layout-column.justify-center,
+.flex-layout-row.justify-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: ;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.flex-layout-column.align-center,
+.flex-layout-row.align-center {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -webkit-box-align: center;
+  -ms-align-content: center;
+  align-content: center;
+}
+.flex-layout-column.full-height,
+.flex-layout-row.full-height {
+  min-height: 100%;
+}
+.flex-layout-item {
+  margin: 0;
+}
+.flex-layout-item.fix {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.flex-layout-item.stretch {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.flex-layout-item.stretch-constrain {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.flex-layout-item.center {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.flex-layout-item.relative {
+  position: relative;
+}
+.flex-layout-item.layout-container {
+  max-width: none;
+}
+.flex-layout-item.width-100 {
+  width: 100px;
+}
+.flex-layout-item.width-200 {
+  width: 200px;
+}
+.flex-layout-item.width-300 {
+  width: 300px;
 }
 body.mainmenu-open {
   overflow: hidden;
@@ -3875,7 +4030,7 @@ html.csstransitions body.outer.preload .outer-form-container {
 }
 .fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li[data-modified] span.tab-close i,
 .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li[data-modified] span.tab-close i {
-  top: 4px;
+  top: 3px;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -3996,6 +4151,7 @@ html.csstransitions body.outer.preload .outer-form-container {
 .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a {
   padding: 8px 16px 0 16px;
   font-weight: 400;
+  height: 33px;
   color: #2b3e50;
   opacity: 0.6;
   filter: alpha(opacity=60);

@@ -31,7 +31,6 @@ return array(
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),
-    'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib'),
     'Cron' => array($vendorDir . '/mtdowling/cron-expression/src'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src'),
     'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),

@@ -72,7 +72,7 @@ abstract class CacheTest extends \Doctrine\Tests\DoctrineTestCase
     {
         $cache  = $this->_getCacheDriver();
         $values = $this->provideDataToCache();
-        $saved  = [];
+        $saved  = array();
 
         foreach ($values as $key => $value) {
             $cache->save($key, $value[0]);
@@ -142,6 +142,22 @@ abstract class CacheTest extends \Doctrine\Tests\DoctrineTestCase
         $cache = $this->_getCacheDriver();
 
         $this->assertSame(array(), $cache->fetchMultiple(array()));
+    }
+
+    public function testSaveMultiple()
+    {
+        $cache = $this->_getCacheDriver();
+        $cache->deleteAll();
+
+        $data = array_map(function ($value) {
+            return $value[0];
+        }, $this->provideDataToCache());
+
+        $this->assertTrue($cache->saveMultiple($data));
+
+        $keys = array_keys($data);
+
+        $this->assertEquals($data, $cache->fetchMultiple($keys));
     }
 
     public function testDeleteIsSuccessfulWhenKeyDoesNotExist()

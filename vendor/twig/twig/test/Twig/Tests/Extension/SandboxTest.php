@@ -13,30 +13,6 @@ class Twig_Tests_Extension_SandboxTest extends PHPUnit_Framework_TestCase
 {
     protected static $params, $templates;
 
-    public function setUp()
-    {
-        self::$params = array(
-            'name' => 'Fabien',
-            'obj' => new FooObject(),
-            'arr' => array('obj' => new FooObject()),
-        );
-
-        self::$templates = array(
-            '1_basic1' => '{{ obj.foo }}',
-            '1_basic2' => '{{ name|upper }}',
-            '1_basic3' => '{% if name %}foo{% endif %}',
-            '1_basic4' => '{{ obj.bar }}',
-            '1_basic5' => '{{ obj }}',
-            '1_basic6' => '{{ arr.obj }}',
-            '1_basic7' => '{{ cycle(["foo","bar"], 1) }}',
-            '1_basic8' => '{{ obj.getfoobar }}{{ obj.getFooBar }}',
-            '1_basic9' => '{{ obj.foobar }}{{ obj.fooBar }}',
-            '1_basic' => '{% if obj.foo %}{{ obj.foo|upper }}{% endif %}',
-            '1_layout' => '{% block content %}{% endblock %}',
-            '1_child' => "{% extends \"1_layout\" %}\n{% block content %}\n{{ \"a\"|json_encode }}\n{% endblock %}",
-        );
-    }
-
     /**
      * @expectedException        Twig_Sandbox_SecurityError
      * @expectedExceptionMessage Filter "json_encode" is not allowed in "1_child" at line 3.
@@ -183,6 +159,30 @@ EOF
         ), array('macro', 'import'), array('escape'));
 
         $this->assertEquals('<p>username</p>', $twig->loadTemplate('index')->render(array()));
+    }
+
+    protected function setUp()
+    {
+        self::$params = array(
+            'name' => 'Fabien',
+            'obj' => new FooObject(),
+            'arr' => array('obj' => new FooObject()),
+        );
+
+        self::$templates = array(
+            '1_basic1' => '{{ obj.foo }}',
+            '1_basic2' => '{{ name|upper }}',
+            '1_basic3' => '{% if name %}foo{% endif %}',
+            '1_basic4' => '{{ obj.bar }}',
+            '1_basic5' => '{{ obj }}',
+            '1_basic6' => '{{ arr.obj }}',
+            '1_basic7' => '{{ cycle(["foo","bar"], 1) }}',
+            '1_basic8' => '{{ obj.getfoobar }}{{ obj.getFooBar }}',
+            '1_basic9' => '{{ obj.foobar }}{{ obj.fooBar }}',
+            '1_basic' => '{% if obj.foo %}{{ obj.foo|upper }}{% endif %}',
+            '1_layout' => '{% block content %}{% endblock %}',
+            '1_child' => "{% extends \"1_layout\" %}\n{% block content %}\n{{ \"a\"|json_encode }}\n{% endblock %}",
+        );
     }
 }
 

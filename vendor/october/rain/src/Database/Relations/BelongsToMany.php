@@ -9,6 +9,11 @@ class BelongsToMany extends BelongsToManyBase
     use DeferOneOrMany;
 
     /**
+     * @var boolean This relation object is a 'count' helper.
+     */
+    public $countMode = false;
+
+    /**
      * Save the supplied related model with deferred binding support.
      */
     public function save(Model $model, array $pivotData = [], $sessionKey = null)
@@ -72,6 +77,25 @@ class BelongsToMany extends BelongsToManyBase
         $this->hydratePivotRelation($paginator->items());
 
         return $paginator;
+    }
+
+    /**
+     * Set the select clause for the relation query.
+     *
+     * @param  array  $columns
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    protected function getSelectColumns(array $columns = ['*'])
+    {
+        if ($this->countMode) {
+            return $this->table.'.'.$this->foreignKey.' as pivot_'.$this->foreignKey;
+        }
+
+        if ($columns == ['*']) {
+            $columns = [$this->related->getTable().'.*'];
+        }
+
+        return array_merge($columns, $this->getAliasedPivotColumns());
     }
 
     /**

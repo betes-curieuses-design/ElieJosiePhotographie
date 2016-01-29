@@ -37,6 +37,12 @@ class Throttle extends Model
      * @var string The table associated with the model.
      */
     protected $table = 'throttle';
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = ['last_attempt_at', 'suspended_at', 'banned_at'];
 
     /**
      * Returns the associated user with the throttler.
@@ -249,14 +255,5 @@ class Throttle extends Model
     public function getIsBannedAttribute($banned)
     {
         return (bool) $banned;
-    }
-
-    /**
-     * Get the attributes that should be converted to dates.
-     * @return array
-     */
-    public function getDates()
-    {
-        return array_merge(parent::getDates(), ['last_attempt_at', 'suspended_at', 'banned_at']);
     }
 }

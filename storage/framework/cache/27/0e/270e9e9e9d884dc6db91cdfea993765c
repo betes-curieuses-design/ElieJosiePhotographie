@@ -1,4 +1,4 @@
-1453430802s:1701:"a:6:{s:5:"mtime";i:1452452599;s:7:"content";s:774:"{% set categories = __SELF__.categories %}
+1453945470s:1701:"a:6:{s:5:"mtime";i:1452452599;s:7:"content";s:774:"{% set categories = __SELF__.categories %}
 {% set currentCategorySlug = __SELF__.currentCategorySlug %}
 <div class="panel panel-default">
     <!-- Default panel contents -->

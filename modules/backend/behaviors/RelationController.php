@@ -1319,7 +1319,7 @@ class RelationController extends ControllerBehavior
             foreach ($hyrdatedModels as $hydratedModel) {
                 $modelsToSave = $this->prepareModelsToSave($hydratedModel, $saveData);
                 foreach ($modelsToSave as $modelToSave) {
-                    $modelToSave->save();
+                    $modelToSave->save(null, $this->pivotWidget->getSessionKey());
                 }
             }
         });
@@ -1341,7 +1341,7 @@ class RelationController extends ControllerBehavior
 
         $modelsToSave = $this->prepareModelsToSave($hydratedModel, $saveData);
         foreach ($modelsToSave as $modelToSave) {
-            $modelToSave->save();
+            $modelToSave->save(null, $this->pivotWidget->getSessionKey());
         }
 
         return ['#'.$this->relationGetId('view') => $this->relationRenderView()];

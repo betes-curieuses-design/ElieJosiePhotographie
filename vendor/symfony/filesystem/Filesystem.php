@@ -413,13 +413,13 @@ class Filesystem
      */
     public function isAbsolutePath($file)
     {
-        return (strspn($file, '/\\', 0, 1)
+        return strspn($file, '/\\', 0, 1)
             || (strlen($file) > 3 && ctype_alpha($file[0])
                 && substr($file, 1, 1) === ':'
-                && (strspn($file, '/\\', 2, 1))
+                && strspn($file, '/\\', 2, 1)
             )
             || null !== parse_url($file, PHP_URL_SCHEME)
-        );
+        ;
     }
 
     /**
@@ -448,14 +448,14 @@ class Filesystem
             throw new IOException(sprintf('Failed to write file "%s".', $filename), 0, null, $filename);
         }
 
-        $this->rename($tmpFile, $filename, true);
         if (null !== $mode) {
             if (func_num_args() > 2) {
                 @trigger_error('Support for modifying file permissions is deprecated since version 2.3.12 and will be removed in 3.0.', E_USER_DEPRECATED);
             }
 
-            $this->chmod($filename, $mode);
+            $this->chmod($tmpFile, $mode);
         }
+        $this->rename($tmpFile, $filename, true);
     }
 
     /**
@@ -525,6 +525,28 @@ class Filesystem
     }
 
     /**
+     * Change mode for an array of files or directories.
+     *
+     * @param string|array|\Traversable $files     A filename, an array of files, or a \Traversable instance to change mode
+     * @param int                       $mode      The new mode (octal)
+     * @param int                       $umask     The mode mask (octal)
+     * @param bool                      $recursive Whether change the mod recursively or not
+     *
+     * @throws IOException When the change fail
+     */
+    public function chmod($files, $mode, $umask = 0000, $recursive = false)
+    {
+        foreach ($this->toIterator($files) as $file) {
+            if (true !== @chmod($file, $mode & ~$umask)) {
+                throw new IOException(sprintf('Failed to chmod file "%s".', $file), 0, null, $file);
+            }
+            if ($recursive && is_dir($file) && !is_link($file)) {
+                $this->chmod(new \FilesystemIterator($file), $mode, $umask, true);
+            }
+        }
+    }
+
+    /**
      * Renames a file or a directory.
      *
      * @param string $origin    The origin filename or directory
@@ -543,28 +565,6 @@ class Filesystem
 
         if (true !== @rename($origin, $target)) {
             throw new IOException(sprintf('Cannot rename "%s" to "%s".', $origin, $target), 0, null, $target);
-        }
-    }
-
-    /**
-     * Change mode for an array of files or directories.
-     *
-     * @param string|array|\Traversable $files     A filename, an array of files, or a \Traversable instance to change mode
-     * @param int                       $mode      The new mode (octal)
-     * @param int                       $umask     The mode mask (octal)
-     * @param bool                      $recursive Whether change the mod recursively or not
-     *
-     * @throws IOException When the change fail
-     */
-    public function chmod($files, $mode, $umask = 0000, $recursive = false)
-    {
-        foreach ($this->toIterator($files) as $file) {
-            if ($recursive && is_dir($file) && !is_link($file)) {
-                $this->chmod(new \FilesystemIterator($file), $mode, $umask, true);
-            }
-            if (true !== @chmod($file, $mode & ~$umask)) {
-                throw new IOException(sprintf('Failed to chmod file "%s".', $file), 0, null, $file);
-            }
         }
     }
 }

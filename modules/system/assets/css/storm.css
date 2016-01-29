@@ -2562,6 +2562,9 @@ div.control-popover.popover-danger.placement-right > div:after {
 div.control-popover.popover-danger .popover-head {
   background-color: #ab2a1c;
 }
+div.control-popover div.popover-fixed-height {
+  height: 300px;
+}
 .popover-highlight {
   position: relative;
   z-index: 562 !important;
@@ -2606,6 +2609,10 @@ div.popover-overlay {
   body.popover-open .control-popover > div:before,
   body.popover-open .control-popover > div:after {
     display: none;
+  }
+  body.popover-open .control-popover div.popover-fixed-height {
+    height: 100%;
+    min-height: 100%;
   }
   body.popover-open .control-popover .popover-head:before {
     display: none;
@@ -4331,6 +4338,7 @@ body.slim-container div.scoreboard {
   font-size: 13px;
   padding: 10px 30px 10px 15px;
   z-index: 10000;
+  word-wrap: break-word;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -9846,6 +9854,9 @@ div.control-popover.inspector-temporary-placement {
 .inspector-columns-editor .toolbar {
   padding: 20px;
 }
+html.gecko.mac .scroll-wrapper.inspector-wrapper > div {
+  margin-right: 17px;
+}
 .inspector-table-list {
   border-top: 1px solid #e2e2e2;
   -webkit-user-select: none;
@@ -9952,8 +9963,14 @@ div.inspector-dictionary-container table.inspector-dictionary-table tbody tr:las
   right: 11px;
   font-size: 21px;
 }
+.inspector-container:empty {
+  display: none;
+}
 .inspector-container .control-scrollpad {
   position: absolute;
+}
+.inspector-field-comment:empty {
+  display: none;
 }
 .select2-dropdown.ocInspectorDropdown {
   font-size: 12px;
@@ -9970,6 +9987,10 @@ div.inspector-dictionary-container table.inspector-dictionary-table tbody tr:las
 }
 .select2-dropdown.ocInspectorDropdown > .select2-results li.select2-no-results {
   padding: 5px 12px 5px;
+}
+.select2-dropdown.ocInspectorDropdown > .select2-results li > i,
+.select2-dropdown.ocInspectorDropdown > .select2-results li > img {
+  margin-left: 6px;
 }
 .select2-dropdown.ocInspectorDropdown .select2-search {
   min-height: 26px;
@@ -11062,7 +11083,7 @@ html.cssanimations .cursor-loading-indicator.hide {
 @media (min-width: 768px) {
   .modal-dialog {
     width: 600px;
-    margin: 30px auto;
+    margin: 80px auto 30px auto;
   }
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);

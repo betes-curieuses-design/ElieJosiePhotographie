@@ -13,7 +13,7 @@ class Yaml
 {
     /**
      * Parses YAML file contents in to a PHP array.
-     * @param $fileName File to read contents and parse.
+     * @param string $fileName File to read contents and parse.
      * @return array The YAML contents as an array.
      */
     public function parseFile($fileName)

@@ -154,6 +154,11 @@ class Less_Tree_Import extends Less_Tree{
 			return array( $contents );
 		}
 
+		// optional (need to be before "CSS" to support optional CSS imports. CSS should be checked only if empty($this->currentFileInfo))
+		if( isset($this->options['optional']) && $this->options['optional'] && !file_exists($full_path) && (!$evald->css || !empty($this->currentFileInfo))) {
+			return array();
+		}
+
 
 		// css ?
 		if( $evald->css ){
@@ -301,4 +306,3 @@ class Less_Tree_Import extends Less_Tree{
 		return $this->features ? new Less_Tree_Media($ruleset->rules, $this->features->value) : $ruleset->rules;
 	}
 }
-

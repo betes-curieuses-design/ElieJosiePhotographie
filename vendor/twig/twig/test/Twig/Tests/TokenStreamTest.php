@@ -13,20 +13,6 @@ class Twig_Tests_TokenStreamTest extends PHPUnit_Framework_TestCase
 {
     protected static $tokens;
 
-    public function setUp()
-    {
-        self::$tokens = array(
-            new Twig_Token(Twig_Token::TEXT_TYPE, 1, 1),
-            new Twig_Token(Twig_Token::TEXT_TYPE, 2, 1),
-            new Twig_Token(Twig_Token::TEXT_TYPE, 3, 1),
-            new Twig_Token(Twig_Token::TEXT_TYPE, 4, 1),
-            new Twig_Token(Twig_Token::TEXT_TYPE, 5, 1),
-            new Twig_Token(Twig_Token::TEXT_TYPE, 6, 1),
-            new Twig_Token(Twig_Token::TEXT_TYPE, 7, 1),
-            new Twig_Token(Twig_Token::EOF_TYPE, 0, 1),
-        );
-    }
-
     public function testNext()
     {
         $stream = new Twig_TokenStream(self::$tokens);
@@ -66,5 +52,19 @@ class Twig_Tests_TokenStreamTest extends PHPUnit_Framework_TestCase
             $stream->look();
             $stream->next();
         }
+    }
+
+    protected function setUp()
+    {
+        self::$tokens = array(
+            new Twig_Token(Twig_Token::TEXT_TYPE, 1, 1),
+            new Twig_Token(Twig_Token::TEXT_TYPE, 2, 1),
+            new Twig_Token(Twig_Token::TEXT_TYPE, 3, 1),
+            new Twig_Token(Twig_Token::TEXT_TYPE, 4, 1),
+            new Twig_Token(Twig_Token::TEXT_TYPE, 5, 1),
+            new Twig_Token(Twig_Token::TEXT_TYPE, 6, 1),
+            new Twig_Token(Twig_Token::TEXT_TYPE, 7, 1),
+            new Twig_Token(Twig_Token::EOF_TYPE, 0, 1),
+        );
     }
 }

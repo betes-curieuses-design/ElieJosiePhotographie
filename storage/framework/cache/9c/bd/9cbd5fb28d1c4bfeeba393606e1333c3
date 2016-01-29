@@ -1,4 +1,4 @@
-1453431937s:4677:"a:6:{s:5:"mtime";i:1452826425;s:7:"content";s:2197:"title = "Catégorie du blogue"
+1453946384s:4677:"a:6:{s:5:"mtime";i:1452826425;s:7:"content";s:2197:"title = "Catégorie du blogue"
 url = "/blog/category/:slug/:page?"
 layout = "default"
 is_hidden = 0

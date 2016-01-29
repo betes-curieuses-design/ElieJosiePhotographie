@@ -144,11 +144,6 @@ class Twig_Test_EscapingTest extends PHPUnit_Framework_TestCase
 
     protected $env;
 
-    public function setUp()
-    {
-        $this->env = new Twig_Environment($this->getMock('Twig_LoaderInterface'));
-    }
-
     public function testHtmlEscapingConvertsSpecialChars()
     {
         foreach ($this->htmlSpecialChars as $key => $value) {
@@ -205,10 +200,6 @@ class Twig_Test_EscapingTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Range tests to confirm escaped range of characters is within OWASP recommendation.
-     */
-
-    /**
      * Only testing the first few 2 ranges on this prot. function as that's all these
      * other range tests require.
      */
@@ -222,6 +213,10 @@ class Twig_Test_EscapingTest extends PHPUnit_Framework_TestCase
         }
         $this->assertEquals($expected, $result);
     }
+
+    /**
+     * Range tests to confirm escaped range of characters is within OWASP recommendation.
+     */
 
     /**
      * Convert a Unicode Codepoint to a literal UTF-8 character.
@@ -316,5 +311,10 @@ class Twig_Test_EscapingTest extends PHPUnit_Framework_TestCase
                     "$literal should be escaped!");
             }
         }
+    }
+
+    protected function setUp()
+    {
+        $this->env = new Twig_Environment($this->getMock('Twig_LoaderInterface'));
     }
 }

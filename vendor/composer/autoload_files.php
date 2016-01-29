@@ -13,6 +13,7 @@ return array(
     $vendorDir . '/kriswallsmith/assetic/src/functions.php',
     $vendorDir . '/ircmaxell/password-compat/lib/password.php',
     $vendorDir . '/october/rain/src/Support/helpers.php',
+    $vendorDir . '/paragonie/random_compat/lib/random.php',
     $vendorDir . '/symfony/polyfill-php56/bootstrap.php',
     $vendorDir . '/psy/psysh/src/Psy/functions.php',
     $vendorDir . '/danielstjules/stringy/src/Create.php',
